@@ -1,2 +1,21 @@
-# CubeSat-Camera-Interface
-Camera interface between two cameras (NIR and Color) and OBC for the LORIS CubeSat project.
+
+# Camera Software Outline (v1)
+## Overview: 
+This software will function as the interface between the camera modules (Color and NIR) and the operating system. The software will utilize the OpenCV library to capture photos from the two different cameras when run then save them in a specified area. We will also take into account various problems that may arise in a spatial environment by considering multiple countermeasures.  
+
+### Objectives: 
+- Capture two photos from two different cameras taking into account potential problems in a spatial environment. 
+- Calibration of cameras in a spatial environment
+- Ease of modification by operating system to account for potential changes in physical environment, such as disk space and camera damage.
+
+### Language: 
+- C++
+
+### Target Operating System:
+- Ubuntu Server 18.01
+
+### Dependencies: 
+- [OpenCV 4.0](https://opencv.org/)
+- Library of various Computer Vision interfaces and algorithms. 
+- Specifically, imgproc, imgcodecs, calib3d and VideoCapture modules will be used
+- *Dependencies may increase as development progresses*
