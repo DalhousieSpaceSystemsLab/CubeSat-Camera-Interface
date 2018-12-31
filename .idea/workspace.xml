@@ -11,267 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f33a3e-fb80-481c-9bbb-15aff46cc12c" name="Default Changelist" comment="CMake Linux port. Going to add TODO soon">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera.xcodeproj/project.xcworkspace/xcuserdata/liamhebert.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera.xcodeproj/project.xcworkspace/xcuserdata/liamhebert.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+    <list default="true" id="b6f33a3e-fb80-481c-9bbb-15aff46cc12c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Headers" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/calib3d.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/calib3d/calib3d.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/calib3d/calib3d_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/affine.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/bindings_utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/bufferpool.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/check.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/core_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda.inl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/block.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/border_interpolate.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/color.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/common.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/datamov_utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/detail/color_detail.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/detail/reduce.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/detail/reduce_key_val.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/detail/transform_detail.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/detail/type_traits_detail.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/detail/vec_distance_detail.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/dynamic_smem.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/emulation.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/filters.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/funcattrib.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/functional.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/limits.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/reduce.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/saturate_cast.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/scan.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/simd_functions.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/transform.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/type_traits.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/utility.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/vec_distance.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/vec_math.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/vec_traits.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/warp.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/warp_reduce.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda/warp_shuffle.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda_stream_accessor.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cuda_types.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cv_cpu_dispatch.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cv_cpu_helper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cvdef.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cvstd.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cvstd.inl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/cvstd_wrapper.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/directx.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/eigen.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/fast_math.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/hal.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/interface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin_avx.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin_cpp.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin_forward.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin_neon.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin_sse.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin_sse_em.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/hal/intrin_vsx.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/mat.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/mat.inl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/matx.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/neon_utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/ocl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/ocl_genbase.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/ocl_defs.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/opencl_info.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/opencl_svm.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/autogenerated/opencl_clamdblas.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/autogenerated/opencl_clamdfft.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/autogenerated/opencl_core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/autogenerated/opencl_core_wrappers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/autogenerated/opencl_gl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_clamdblas.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_clamdfft.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_core_wrappers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_gl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_gl_wrappers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_svm_20.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_svm_definitions.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opencl/runtime/opencl_svm_hsa_extension.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/opengl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/operations.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/optim.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/ovx.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/persistence.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/saturate.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/softfloat.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/sse_utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/traits.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/types.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/types_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/utility.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/utils/filesystem.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/utils/logger.defines.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/utils/logger.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/utils/trace.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/va_intel.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/version.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/core/vsx_utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/cvconfig.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/all_layers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/dict.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/dnn.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/dnn.inl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/layer.details.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/layer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/shape_utils.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/dnn/version.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/features2d.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/features2d/features2d.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/features2d/hal/interface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/all_indices.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/allocator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/any.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/autotuned_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/composite_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/defines.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/dist.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/dummy.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/dynamic_bitset.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/flann.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/flann_base.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/general.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/ground_truth.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/heap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/hierarchical_clustering_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/index_testing.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/kdtree_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/kdtree_single_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/kmeans_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/linear_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/logger.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/lsh_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/lsh_table.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/matrix.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/miniflann.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/nn_index.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/object_factory.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/params.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/random.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/result_set.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/sampling.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/saving.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/simplex_downhill.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/flann/timer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/cpu/core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/cpu/gcpukernel.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/cpu/imgproc.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/fluid/core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/fluid/gfluidbuffer.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/fluid/gfluidkernel.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/fluid/imgproc.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/garg.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/garray.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gcall.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gcommon.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gcompiled.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gcompoundkernel.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gcomputation.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gkernel.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gmat.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gmetaarg.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gproto.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gpu/core.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gpu/ggpukernel.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gpu/imgproc.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gscalar.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gtype_traits.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/gtyped.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/imgproc.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/opencv_includes.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/operators.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/assert.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/convert.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/cvdefs.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/exports.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/mat.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/saturate.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/scalar.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/own/types.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/util/any.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/util/compiler_hints.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/util/optional.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/util/throw.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/util/util.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/gapi/util/variant.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/highgui.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/highgui/highgui.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/highgui/highgui_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgcodecs.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgcodecs/imgcodecs.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgcodecs/imgcodecs_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgcodecs/ios.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgproc.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgproc/detail/gcgraph.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgproc/hal/hal.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgproc/hal/interface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgproc/imgproc.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgproc/imgproc_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/imgproc/types_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/ml.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/ml/ml.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/ml/ml.inl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/objdetect.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/objdetect/detection_based_tracker.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/objdetect/objdetect.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/opencv.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/opencv_modules.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/photo.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/photo/cuda.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/photo/photo.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/autocalib.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/blenders.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/camera.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/exposure_compensate.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/matchers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/motion_estimators.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/seam_finders.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/timelapsers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/util.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/util_inl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/warpers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/detail/warpers_inl.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/stitching/warpers.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/video.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/video/background_segm.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/video/tracking.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/video/video.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/videoio.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/videoio/cap_ios.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/videoio/registry.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/videoio/videoio.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/videoio/videoio_c.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Headers/world.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/Resources/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/A/opencv2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/Versions/Current" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/opencv2.framework/opencv2" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -280,23 +24,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="452">
+              <caret line="188" column="6" selection-start-line="188" selection-start-column="6" selection-end-line="188" selection-end-column="6" />
+              <folding>
+                <element signature="e#158#177#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -327,8 +69,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="730" />
-    <option name="width" value="710" />
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -396,24 +137,39 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546035429034</updated>
-      <workItem from="1546035432155" duration="1122000" />
+      <workItem from="1546035432155" duration="14993000" />
     </task>
+    <task id="LOCAL-00001" summary="CMake port. Going to add TODO soon">
+      <created>1546036695150</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546036695150</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TODO list">
+      <created>1546038034929</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546038034929</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1122000" />
+    <option name="totallyTimeSpent" value="14993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="730" y="0" width="710" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.50748503" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.5071531" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="CMake" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -434,7 +190,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CMake Linux port. Going to add TODO soon" />
-    <option name="LAST_COMMIT_MESSAGE" value="CMake Linux port. Going to add TODO soon" />
+    <MESSAGE value="CMake port. Going to add TODO soon" />
+    <MESSAGE value="TODO list" />
+    <option name="LAST_COMMIT_MESSAGE" value="TODO list" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt">
@@ -446,8 +204,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="452">
+          <caret line="188" column="6" selection-start-line="188" selection-start-column="6" selection-end-line="188" selection-end-column="6" />
+          <folding>
+            <element signature="e#158#177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
