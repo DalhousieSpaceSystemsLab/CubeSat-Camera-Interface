@@ -392,3 +392,29 @@
 [22:54:49 (1546829689132)] END OF RUNTIME
 [22:54:49 (1546829689132)] Runtime: 1622ms - Error Count: 0
 
+[23:11:38 (1546830698503)] START OF RUNTIME
+[23:11:38 (1546830698504)] [ACTION] Taking pictures...
+[23:11:38 (1546830698504)] [ACTION] Using Camera 0...
+[23:11:39 (1546830699701)] [ACTION] Camera 0 frame grab
+[23:11:39 (1546830699707)] [ACTION] Using Camera 1...
+[23:11:40 (1546830700476)] [ACTION] Camera 1 frame grab
+[23:11:40 (1546830700476)] Picture Taking Time: 1973ms
+[23:11:40 (1546830700476)] [ACTION] Compressing...
+[23:11:40 (1546830700491)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-6 (C1).jpeg
+[23:11:40 (1546830700517)] [ACTION] Camera 1 Success! Saved at Pictures/2019-1-6 (C1).jpeg
+[23:11:40 (1546830700517)] END OF RUNTIME
+[23:11:40 (1546830700517)] Runtime: 2014ms - Error Count: 0
+
+[23:12:38 (1546830758569)] START OF RUNTIME
+[23:12:38 (1546830758569)] [ACTION] Taking pictures...
+[23:12:38 (1546830758569)] [ACTION] Using Camera 0...
+[23:12:39 (1546830759642)] [ACTION] Camera 0 frame grab
+[23:12:39 (1546830759644)] [ACTION] Using Camera 1...
+[23:12:40 (1546830760347)] [ACTION] Camera 1 frame grab
+[23:12:40 (1546830760347)] Picture Taking Time: 1779ms
+[23:12:40 (1546830760347)] [ACTION] Compressing...
+[23:12:40 (1546830760362)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-6 (C1).jpeg
+[23:12:40 (1546830760387)] [ACTION] Camera 1 Success! Saved at Pictures/2019-1-6 (C1).jpeg
+[23:12:40 (1546830760387)] END OF RUNTIME
+[23:12:40 (1546830760387)] Runtime: 1819ms - Error Count: 0
+
