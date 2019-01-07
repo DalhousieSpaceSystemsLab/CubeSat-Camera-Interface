@@ -17,6 +17,48 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="CubeSat_Payload.exe">
+				<Option output="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 CubeSat_Payload.exe"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CubeSat_Payload.exe/fast">
+				<Option output="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 CubeSat_Payload.exe/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug"/>
 				<Option type="4"/>
@@ -83,6 +125,7 @@
 			</Target>
 		</Build>
 		<Unit filename="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/main.cpp">
+			<Option target="CubeSat_Payload.exe"/>
 			<Option target="CubeSat_Payload"/>
 		</Unit>
 		<Unit filename="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/CMakeLists.txt">

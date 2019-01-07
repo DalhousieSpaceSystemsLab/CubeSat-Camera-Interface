@@ -183,7 +183,7 @@ int main(int argc, const char * argv[]) {
     //gathering sys date
     string date = getDate();
     if (!quiet) { //create logs if not in quiet mode
-        printer.open("Error Logs/" + date + ".txt", ios_base::app); //opening file or creating new one if does not exist
+        printer.open("Error Logs/" + date + ".log", ios_base::app); //opening file or creating new one if does not exist
         log(999, "START OF RUNTIME"); //I know what you are thinking, I lied here. shhhh
     }
     if (defaultPath) //no custom path
@@ -194,29 +194,29 @@ int main(int argc, const char * argv[]) {
         compression = "jpeg";
 
     // initializing using default API
-    log(99, "Initializing cameras...");
 
-    // camera 0
-    VideoCapture capture0;
-    if (useCam0) {
-        capture0.open(0);
-    }
 
-    // camera 1
-    VideoCapture capture1;
-    if (useCam1) {
-        capture1.open(1);
-    }
+
+
+
 
 
     //take picture and test for success
 
     log(99, "Taking pictures...");
 
-    Mat picture0;
-    Mat picture1;
+
+
 
     //TODO - Potentially implement multithreading here :)
+    // camera 0
+
+    VideoCapture capture0;
+    if (useCam0) {
+        log(99, "Using Camera 0...");
+        capture0.open(0);
+    }
+    Mat picture0;
     if (capture0.isOpened()) {
         picture0 = capture(capture0);
         log(99, "Camera 0 frame grab");
@@ -224,6 +224,15 @@ int main(int argc, const char * argv[]) {
     else if (useCam0)
         log(2, "Camera 0 failed to open");
 
+
+    // camera 1
+    VideoCapture capture1;
+    if (useCam1) {
+        log(99, "Using Camera 1...");
+        capture1.open(1);
+    }
+
+    Mat picture1;
     if (capture1.isOpened()) {
         picture1 = capture(capture1);
         log(99, "Camera 1 frame grab");

@@ -227,6 +227,12 @@ main.cpp_BINARY_DIR:STATIC=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Int
 //Value Computed by CMake
 main.cpp_SOURCE_DIR:STATIC=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera
 
+//Value Computed by CMake
+test/main.cpp_BINARY_DIR:STATIC=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug
+
+//Value Computed by CMake
+test/main.cpp_SOURCE_DIR:STATIC=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera
+
 
 ########################
 # INTERNAL cache entries

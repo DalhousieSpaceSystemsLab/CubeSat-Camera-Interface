@@ -1,0 +1,11 @@
+[15:18:20 (1546715900375)] START OF RUNTIME
+[15:18:20 (1546715900376)] [ACTION] Initializing cameras...
+[15:18:21 (1546715901359)] [ACTION] Taking pictures...
+[15:18:21 (1546715901434)] [ACTION] Camera 0 frame grab
+[15:18:21 (1546715901434)] [MODERATE] Camera 1 failed to open
+[15:18:21 (1546715901434)] Picture Taking Time: 1060ms
+[15:18:21 (1546715901434)] [ACTION] Compressing...
+[15:18:21 (1546715901501)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-5 (C1).jpeg
+[15:18:21 (1546715901501)] END OF RUNTIME
+[15:18:21 (1546715901501)] Runtime: 1127ms - Error Count: 1
+
