@@ -261,6 +261,7 @@ int main(int argc, const char * argv[]) {
         if (compress(picture1, filePath, fileName + " (C1)", compression))
             log(99, "Camera 1 Success! Saved at " + filePath + fileName + " (C1)" + "." + compression);
         else
+
             log(1, "Camera 1 failed but opened, possible defect or bug");
     }
 
