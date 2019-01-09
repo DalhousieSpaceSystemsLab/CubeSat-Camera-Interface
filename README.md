@@ -16,8 +16,10 @@ This software will function as the interface between the camera modules (Color a
 
 ### Dependencies: 
 - [OpenCV 4.0](https://opencv.org/)
-- Library of various Computer Vision interfaces and algorithms. 
-- Specifically, imgproc, imgcodecs, calib3d and VideoCapture modules will be used
+  - Library of various Computer Vision interfaces and algorithms. 
+  - Specifically, imgproc, imgcodecs, calib3d and VideoCapture modules will be used
+- [CMake](https://cmake.org/)
+  - Used to compile OpenCV with the main script
 - *Dependencies may increase as development progresses*
 
 ### Command Line Args:
