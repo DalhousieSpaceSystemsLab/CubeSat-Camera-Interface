@@ -5,7 +5,7 @@ This software will function as the interface between the camera modules (Color a
 
 ### Objectives: 
 - Capture two photos from two different cameras taking into account potential problems in a spatial environment. 
-- Calibration of cameras in a spatial environment
+- Extremely fast picture capture to account for communication delay
 - Ease of modification by operating system to account for potential changes in physical environment, such as disk space and camera damage.
 
 ### Language: 
