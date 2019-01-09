@@ -1,5 +1,5 @@
 
-# CubeSat Camera
+# CubeSat Camera Interface
 ## Overview: 
 This software will function as the interface between the camera modules (Color and NIR) and the operating system. The software will utilize the OpenCV library to capture photos from the two different cameras when run then save them in a specified area. We will also take into account various problems that may arise in a spatial environment by considering multiple countermeasures.  
 
