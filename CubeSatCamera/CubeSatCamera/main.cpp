@@ -50,12 +50,7 @@ bool compress(const Mat &frame, const string &path, const string &name, const st
     return imwrite(path + name + "." + compression, frame);
 }
 
-//calibrates camera appropriately
-bool calibrate() {
-    //TODO - build this
-    //research indicates that cameras only need to be re-calibrated once a year.
-    return false;
-}
+
 
 //logs errors and actions into Error Logs/(date).txt
 void log(int level, const string &msg) {
@@ -115,19 +110,23 @@ int main(int argc, const char * argv[]) {
     }
 
     //parameters
+    string date = getDate();
     quiet = false;
     bool useCam0 = true;
     bool useCam1 = true;
     bool defaultPath = true;
-    string filePath;
+    string filePath = "Pictures/";
     bool defaultName = true;
-    string fileName;
+    string fileName = date;
     bool defaultCompression = true;
     string compression;
+    bool defaultImageQuality = true;
+    int imageQualityJPEG = 95;
+    int imageQualityPNG = 7; //note this will be applied as 10 - 7;
 
     //gathering commandline args
     string arg;
-    for (int i = 1; i < argc; i++) {
+    for (int i = 1; i < argc; i++) { //sadly switch statements cannot be used here without hashing, which has the potential to be inaccurate and is not worth the time loss
         arg = argv[i];
         if (arg == "-q") //no logs
             quiet = true;
@@ -135,7 +134,7 @@ int main(int argc, const char * argv[]) {
             useCam0 = false;
         else if (arg == "-nc1") //ignore camera 1
             useCam1 = false;
-        //TODO - clean this up
+        //same process yes, but every time different values. Methoding this would have a massive argument list, not worth
         else if (arg == "-p") { //custom path
             if (i + 1 < argc) { //room for filename
                 arg = argv[i + 1];
@@ -178,27 +177,51 @@ int main(int argc, const char * argv[]) {
                 }
             } else cerr << "missing compression string";
         }
+        else if (arg == "-iq") {
+            if (i + 1 < argc) {
+                arg = argv[i + 1];
+                if (arg.at(0) != '-') {
+                    imageQualityJPEG = stoi(arg); //will check what the real format is later
+                    defaultImageQuality = false;
+                    i++;
+                }
+                else {
+                    arg = argv[i];
+                    cerr << "invalid compression format";
+                }
+            } else cerr << "missing compression string";
+        }
     }
 
-    //gathering sys date
-    string date = getDate();
+
     if (!quiet) { //create logs if not in quiet mode
         printer.open("Error Logs/" + date + ".log", ios_base::app); //opening file or creating new one if does not exist
         log(999, "START OF RUNTIME"); //I know what you are thinking, I lied here. shhhh
     }
-    if (defaultPath) //no custom path
-        filePath = "Pictures/";
-    if (defaultName) //no custom file name
-        fileName = date;
-    if (defaultCompression) //no custom compression method
-        compression = "jpeg";
 
-    // initializing using default API
+    if (!defaultPath) //no custom path
+        log(99, "New file path detected! Saving path as " + filePath);
+
+    if (!defaultName) //no custom file name
+        log(99, "New file name detected! Saving file name as " + fileName);
+
+    if (!defaultCompression) //no custom compression method
+        log(99, "New compression detected! Saving file as " + compression);
+
+    if (!defaultImageQuality) {
+        if (compression == "jpeg") {
+            log(99, "Compression level for JPEG detected! Setting compression as " + to_string(imageQualityJPEG));
+        }
+        else if (compression == "png") {
+            imageQualityPNG = imageQualityJPEG % 10;
+            log(99, "Compression level for PNG detected! Setting png compression level as " + to_string(imageQualityPNG));
+        }
+        else
+            log(2, "Compression level detected, but invalid compression format (only JPEG and PNG supported), using default settings for " + compression);
+    }
 
 
-
-
-
+    log(99, "Target file path is " + filePath + fileName + "." + compression);
 
 
     //take picture and test for success
@@ -209,7 +232,7 @@ int main(int argc, const char * argv[]) {
 
 
     //TODO - Potentially implement multithreading here :)
-    // camera 0
+    //camera 0
 
     VideoCapture capture0;
     if (useCam0) {
