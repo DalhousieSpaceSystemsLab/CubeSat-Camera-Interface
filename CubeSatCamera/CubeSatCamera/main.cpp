@@ -94,6 +94,7 @@ void log(int level, const string &msg) {
 }
 
 int main(int argc, const char * argv[]) {
+    cout << CV_VERSION;
     startTime = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count();
     errorCount = 0;
 

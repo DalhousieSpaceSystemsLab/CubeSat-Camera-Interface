@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CubeSat_PayloadW
-
-# Build rule for target.
-CubeSat_PayloadW: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CubeSat_PayloadW
-.PHONY : CubeSat_PayloadW
-
-# fast build rule for target.
-CubeSat_PayloadW/fast:
-	$(MAKE) -f CMakeFiles/CubeSat_PayloadW.dir/build.make CMakeFiles/CubeSat_PayloadW.dir/build
-.PHONY : CubeSat_PayloadW/fast
-
-#=============================================================================
 # Target rules for targets named CubeSat_Payload
 
 # Build rule for target.
@@ -142,7 +129,6 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/CubeSat_PayloadW.dir/build.make CMakeFiles/CubeSat_PayloadW.dir/main.cpp.o
 	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/main.cpp.o
 .PHONY : main.cpp.o
 
@@ -152,7 +138,6 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/CubeSat_PayloadW.dir/build.make CMakeFiles/CubeSat_PayloadW.dir/main.cpp.i
 	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/main.cpp.i
 .PHONY : main.cpp.i
 
@@ -162,7 +147,6 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/CubeSat_PayloadW.dir/build.make CMakeFiles/CubeSat_PayloadW.dir/main.cpp.s
 	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/main.cpp.s
 .PHONY : main.cpp.s
 
@@ -172,7 +156,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... CubeSat_PayloadW"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CubeSat_Payload"

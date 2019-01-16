@@ -2,7 +2,6 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="main.cpp" targetName="CubeSat_Payload.exe" />
       <config projectName="main.cpp" targetName="CubeSat_Payload" />
     </generated>
   </component>
@@ -15,11 +14,16 @@
     <list default="true" id="b6f33a3e-fb80-481c-9bbb-15aff46cc12c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.exe.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.exe.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_PayloadW" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_PayloadW" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/Error Logs/2019-1-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/Error Logs/2019-1-15.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/main.cpp.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/main.cpp.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp" afterDir="false" />
     </list>
@@ -40,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -49,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
-              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+            <state relative-caret-position="-290">
+              <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -90,7 +94,10 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -115,21 +122,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CubeSat_PayloadW">
+  <component name="RunManager">
     <configuration name="CubeSat_Payload" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_Payload" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_Payload">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CubeSat_PayloadW" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_PayloadW" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_PayloadW">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.CubeSat_Payload" />
-      <item itemvalue="Application.CubeSat_PayloadW" />
-    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -149,6 +147,8 @@
       <workItem from="1547477371467" duration="156000" />
       <workItem from="1547499306910" duration="904000" />
       <workItem from="1547571931323" duration="4164000" />
+      <workItem from="1547599869632" duration="2509000" />
+      <workItem from="1547603388955" duration="2628000" />
     </task>
     <task id="LOCAL-00001" summary="CMake port. Going to add TODO soon">
       <created>1546036695150</created>
@@ -168,28 +168,37 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29283000" />
+    <option name="totallyTimeSpent" value="34420000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="803" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.5135909" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2160229" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32630098" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3305204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32911393" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.1954993" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.1954993" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32630098" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32891566" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.38396624" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32630098" />
+      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.38396624" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -210,7 +219,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp</url>
-          <line>240</line>
+          <line>241</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -223,15 +232,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+        <state relative-caret-position="-290">
+          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

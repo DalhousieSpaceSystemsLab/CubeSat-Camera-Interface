@@ -65,43 +65,6 @@ CMAKE_SOURCE_DIR = /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/C
 CMAKE_BINARY_DIR = /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/CubeSat_PayloadW.dir
-
-# All Build rule for target.
-CMakeFiles/CubeSat_PayloadW.dir/all:
-	$(MAKE) -f CMakeFiles/CubeSat_PayloadW.dir/build.make CMakeFiles/CubeSat_PayloadW.dir/depend
-	$(MAKE) -f CMakeFiles/CubeSat_PayloadW.dir/build.make CMakeFiles/CubeSat_PayloadW.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target CubeSat_PayloadW"
-.PHONY : CMakeFiles/CubeSat_PayloadW.dir/all
-
-# Include target in all.
-all: CMakeFiles/CubeSat_PayloadW.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/CubeSat_PayloadW.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CubeSat_PayloadW.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/CubeSat_PayloadW.dir/rule
-
-# Convenience name for target.
-CubeSat_PayloadW: CMakeFiles/CubeSat_PayloadW.dir/rule
-
-.PHONY : CubeSat_PayloadW
-
-# clean rule for target.
-CMakeFiles/CubeSat_PayloadW.dir/clean:
-	$(MAKE) -f CMakeFiles/CubeSat_PayloadW.dir/build.make CMakeFiles/CubeSat_PayloadW.dir/clean
-.PHONY : CMakeFiles/CubeSat_PayloadW.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/CubeSat_PayloadW.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/CubeSat_Payload.dir
 
 # All Build rule for target.
