@@ -115,20 +115,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CubeSat_Payload">
+  <component name="RunManager" selected="Application.CubeSat_PayloadW">
     <configuration name="CubeSat_Payload" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_Payload" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_Payload">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CubeSat_Payload.exe" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_Payload.exe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_Payload.exe">
+    <configuration name="CubeSat_PayloadW" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_PayloadW" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_PayloadW">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.CubeSat_Payload" />
-      <item itemvalue="Application.CubeSat_Payload.exe" />
+      <item itemvalue="Application.CubeSat_PayloadW" />
     </list>
   </component>
   <component name="SvnConfiguration">

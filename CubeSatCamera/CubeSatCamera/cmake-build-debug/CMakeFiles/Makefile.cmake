@@ -56,6 +56,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/CubeSat_Payload.exe.dir/DependInfo.cmake"
+  "CMakeFiles/CubeSat_PayloadW.dir/DependInfo.cmake"
   "CMakeFiles/CubeSat_Payload.dir/DependInfo.cmake"
   )
