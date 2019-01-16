@@ -1,0 +1,144 @@
+Instructions on how to install opencv and its dependancies from scratch!
+- Liam Hebert, Jan 16 2019
+
+## Step 1 - Install updates to bash
+# to install some dependancies later, we need to have a current version of bash/linux
+
+sudo apt-get update
+sudo apt-get upgrade
+
+# this installs all the updates for bash
+
+## Step 2 - Install build-essentials
+# this includes all the necessary development treats that are needed
+
+sudo apt-get install build-essential
+
+# note: this will install a few things on your pc, make you have min 1gb of space for everything!
+
+## Step 3 - Install homebrew 
+# homebrew is a linux package manager. It links packages to linux and installs all the dependancies for you. Truly awesome and a time saver
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+
+## Step 4 - Install opencv
+# this step will install opencv and all of its dependancies. This step takes a looooooooong time and will not work without the build-essentials. Make sure you have that before continuing!
+
+brew install opencv
+
+# yes the command is that easy! Feel free to grab a coffee, get a sandwich, walk your dog, etc. lots of stuff to download
+
+# Step 5a - download the software!
+# this will use git to download the code into a directory
+
+git clone https://github.com/liamhebert/CubeSat-Camera-Interface.git
+
+# note: if this asks you for a username and password, you have a typo
+
+
+
+## Step 6 - Go to the directory! 
+
+cd CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/
+[optional] ls
+[optional] pwd
+
+# this gets you to where the action is! ls will show you everything that's in the folder and pwd will show you the path you are at. 
+
+-- we are now entering the build-compile-run phase, all the pre-regs are now finished --
+## NOTE: if you are coming back to the step after already building and downloading, run this first
+
+git pull
+
+# this ensures you are running the latest version of the software
+
+
+## Step 7a - Build the program!
+# here we use cmake to compile everything! If you edit main.cpp and want to test the results, this step will remake the executable that you can run.
+# if you are not, use cd .. to go up a directory
+
+rm ./cmake-build-debug/CMakeCache.txt
+cmake -B ./cmake-build-debug -S .
+
+
+# this removes the previous compile settings (computer dependant, I know, gross) and builds the project in the cmake-build-debug folder using the source files from the main directory. 
+
+## Step 7b* - Compile the program! (VERY IMPORTANT)
+# if you change anything to main.cpp, this step will recreate the executable that you launch from
+
+cmake --build ./cmake-build-debug 
+
+# if you get a message like "Build target CubeSat_Payload" we have succeeded! 
+
+## Step 8a - Launch the program!
+
+./cmake-build-debug/CubeSat_Payload
+
+# this launches the program in the command line! If you get any error messages, this is where you want to message me :)
+
+## Step 8b - Optional, add params!
+
+./cmake-build-debug/CubeSat_Payload [args]
+
+# To see the args, see readme.md on the GitHub
+
+-- we are now in the analysis phase --
+
+# all of the results are saved in ./cmake-build-debug/Pictures and ./cmake-build-debug/Error Logs
+
+# a) to see all the pictures saved
+cd ./cmake-build-debug/Pictures
+ls 
+
+# b) to open a picture (while in the directory) (assuming your linux distro has an image viewer)
+open "*filename*"
+
+# c) to see info about the picture and file size
+file "*filename*" 
+ls -lh "*filename*"
+
+# for logs,
+
+# if in pictures directory,
+
+cd ../"Error Logs"
+ls
+
+# if in main directory (outside of cmake-build-debug)
+
+cd ./cmake-build-debug/"Error Logs"
+ls
+
+# repeat step b) to see log info (assuming text editor installed)
+
+# if this does not work,
+emacs "*filename*"
+
+# will open the file in command line. To exit, Ctrl-X then Ctrl-C
+
+-- now to push the results to the GitHub! --
+
+# add error logs (assuming outside of cmake-build-debug)
+
+git add cmake-build-debug/"Error Logs"/YYYY-M-D.log
+
+#ex: git add cmake-build-debug/"Error Logs"/2019-1-16.log
+
+# build a commit to push!
+
+git commit -a -m "whatever you want to write, added logs!"
+
+# push to the GitHub
+
+git push
+
+-- and that's it! --
+
+If you have any problems with any of this, message me on slack @liamhebert or Liam.hebert@dal.ca
+
+Enjoy!
+
+
+
+
+
