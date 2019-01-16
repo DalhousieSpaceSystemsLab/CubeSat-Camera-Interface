@@ -12,7 +12,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f33a3e-fb80-481c-9bbb-15aff46cc12c" name="Default Changelist" comment="" />
+    <list default="true" id="b6f33a3e-fb80-481c-9bbb-15aff46cc12c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.exe.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CMakeFiles/CubeSat_Payload.exe.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/main.cpp.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/main.cpp.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,20 +37,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2959">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="-245">
+              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -66,8 +76,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/test/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp" />
+        <option value="$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -105,13 +115,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CubeSat_Payload.exe">
+  <component name="RunManager" selected="Application.CubeSat_Payload">
     <configuration name="CubeSat_Payload" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_Payload" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_Payload">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CubeSat_Payload.exe" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-q -nc1 -c png" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_Payload.exe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_Payload.exe">
+    <configuration name="CubeSat_Payload.exe" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="main.cpp" TARGET_NAME="CubeSat_Payload.exe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="main.cpp" RUN_TARGET_NAME="CubeSat_Payload.exe">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -137,6 +147,8 @@
       <workItem from="1546830664509" duration="193000" />
       <workItem from="1546896900301" duration="2427000" />
       <workItem from="1547477371467" duration="156000" />
+      <workItem from="1547499306910" duration="904000" />
+      <workItem from="1547571931323" duration="4164000" />
     </task>
     <task id="LOCAL-00001" summary="CMake port. Going to add TODO soon">
       <created>1546036695150</created>
@@ -156,7 +168,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24215000" />
+    <option name="totallyTimeSpent" value="29283000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="803" extended-state="6" />
@@ -193,22 +205,33 @@
     <MESSAGE value="TODO list" />
     <option name="LAST_COMMIT_MESSAGE" value="TODO list" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp</url>
+          <line>240</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/test/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/cmake-build-debug/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="-245">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/main.cpp">
+    <entry file="file://$PROJECT_DIR$/CubeSatCamera/CubeSatCamera/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2959">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

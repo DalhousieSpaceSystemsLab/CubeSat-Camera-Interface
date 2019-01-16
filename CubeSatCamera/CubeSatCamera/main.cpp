@@ -47,7 +47,9 @@ Mat capture(VideoCapture cap) {
 
 //takes frame and saves it at path with specified compression format
 bool compress(const Mat &frame, const string &path, const string &name, const string &compression) {
-    return imwrite(path + name + "." + compression, frame);
+    imwrite(path + name + ".tiff", frame);
+    imwrite(path + name + ".png", frame);
+    return imwrite(path + name + "." + "jpeg", frame);
 }
 
 
@@ -112,7 +114,7 @@ int main(int argc, const char * argv[]) {
     //parameters
     string date = getDate();
     quiet = false;
-    bool useCam0 = true;
+    bool visible = true;
     bool useCam1 = true;
     bool defaultPath = true;
     string filePath = "Pictures/";
@@ -131,7 +133,7 @@ int main(int argc, const char * argv[]) {
         if (arg == "-q") //no logs
             quiet = true;
         else if (arg == "-nc0") //ignore camera 0
-            useCam0 = false;
+            visible = false;
         else if (arg == "-nc1") //ignore camera 1
             useCam1 = false;
         //same process yes, but every time different values. Methoding this would have a massive argument list, not worth
@@ -234,30 +236,30 @@ int main(int argc, const char * argv[]) {
     //TODO - Potentially implement multithreading here :)
     //camera 0
 
-    VideoCapture capture0;
-    if (useCam0) {
+    VideoCapture visble;
+    if (visible) {
         log(99, "Using Camera 0...");
-        capture0.open(0);
+        visble.open(0);
     }
     Mat picture0;
-    if (capture0.isOpened()) {
-        picture0 = capture(capture0);
+    if (visble.isOpened()) {
+        picture0 = capture(visble);
         log(99, "Camera 0 frame grab");
     }
-    else if (useCam0)
-        log(2, "Camera 0 failed to open");
+    else if (visible)
+        log(2, "Camera 0 failed  to open");
 
 
     // camera 1
-    VideoCapture capture1;
+    VideoCapture NIR;
     if (useCam1) {
-        log(99, "Using Camera 1...");
-        capture1.open(1);
+        log(99, "Using NIR...");
+        NIR.open(1);
     }
 
     Mat picture1;
-    if (capture1.isOpened()) {
-        picture1 = capture(capture1);
+    if (NIR.isOpened()) {
+        picture1 = capture(NIR);
         log(99, "Camera 1 frame grab");
 
     }
@@ -272,7 +274,7 @@ int main(int argc, const char * argv[]) {
 
     //checking if pictures saved, if saved, compress
     //camera 0
-    if (capture0.isOpened()) {
+    if (visble.isOpened()) {
         if (compress(picture0, filePath, fileName + " (C0)", compression))
             log(99, "Camera 0 Success! Saved at " + filePath + fileName + " (C1)" + "." + compression);
         else
@@ -280,7 +282,7 @@ int main(int argc, const char * argv[]) {
     }
 
     //camera 1
-    if (capture1.isOpened()) {
+    if (NIR.isOpened()) {
         if (compress(picture1, filePath, fileName + " (C1)", compression))
             log(99, "Camera 1 Success! Saved at " + filePath + fileName + " (C1)" + "." + compression);
         else
@@ -300,9 +302,10 @@ int main(int argc, const char * argv[]) {
         log(999, "Runtime: " + to_string(runTime) + "ms - Error Count: " + to_string(errorCount));
         log(-1, "");
     }
+
     //destroying
-    capture0.release();
-    capture1.release();
+    visble.release();
+    NIR.release();
     printer.close();
     return 0;
 }

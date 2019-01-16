@@ -21,7 +21,7 @@
 				<Option output="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="0"/>
+				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
@@ -43,7 +43,7 @@
 				<Option output="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug/CubeSat_Payload.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/CubeSatCamera/CubeSatCamera/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="0"/>
+				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
