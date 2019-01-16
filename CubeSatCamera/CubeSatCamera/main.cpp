@@ -46,10 +46,8 @@ Mat capture(VideoCapture cap) {
 }
 
 //takes frame and saves it at path with specified compression format
-bool compress(const Mat &frame, const string &path, const string &name, const string &compression) {
-    imwrite(path + name + ".tiff", frame);
-    imwrite(path + name + ".png", frame);
-    return imwrite(path + name + "." + "jpeg", frame);
+bool compress(const Mat &frame, const string &path, const string &name, const string &compression)
+    return imwrite(path + name + "." + compression, frame);
 }
 
 
@@ -122,7 +120,7 @@ int main(int argc, const char * argv[]) {
     bool defaultName = true;
     string fileName = date;
     bool defaultCompression = true;
-    string compression;
+    string compression = "jpeg";
     bool defaultImageQuality = true;
     int imageQualityJPEG = 95;
     int imageQualityPNG = 7; //note this will be applied as 10 - 7;
