@@ -1,0 +1,3 @@
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles/rebuild_cache.dir
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles/edit_cache.dir
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles/CubeSat_Payload.dir
