@@ -147,7 +147,7 @@
       <workItem from="1547571931323" duration="4164000" />
       <workItem from="1547599869632" duration="2509000" />
       <workItem from="1547603388955" duration="3117000" />
-      <workItem from="1547649529188" duration="147000" />
+      <workItem from="1547649529188" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="CMake port. Going to add TODO soon">
       <created>1546036695150</created>
@@ -167,7 +167,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35056000" />
+    <option name="totallyTimeSpent" value="35602000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
