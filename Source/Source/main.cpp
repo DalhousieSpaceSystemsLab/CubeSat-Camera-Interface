@@ -1,7 +1,7 @@
 //
 //  main.cpp
 //  CubeSatCamera
-//
+//  HARDCODED PI VERSION
 //  Created by Liam Hebert on 2018-12-21.
 //  Copyright © 2018 Dal Orbital Science & Space Lab. All rights reserved.
 //
@@ -39,6 +39,8 @@ string getTime() {
 
 //grabs next frame from camera
 Mat capture(VideoCapture cap) {
+    cap.set(CAP_PROP_FRAME_WIDTH, 3280);
+    cap.set(CAP_PROP_FRAME_HEIGHT, 2464);
     Mat frame;
     cap.grab(); // grabs next frame
     cap.read(frame); // saves picture to frame

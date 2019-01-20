@@ -1,0 +1,13 @@
+[17:53:4 (1548021184542)] START OF RUNTIME
+[17:53:4 (1548021184542)] [ACTION] Target file path is Pictures/2019-1-20.jpeg
+[17:53:4 (1548021184542)] [ACTION] Taking pictures...
+[17:53:4 (1548021184542)] [ACTION] Using Camera 0...
+[17:53:5 (1548021185474)] [ACTION] Camera 0 frame grab
+[17:53:5 (1548021185474)] [ACTION] Using NIR...
+[17:53:5 (1548021185474)] [MODERATE] Camera 1 failed to open
+[17:53:5 (1548021185474)] Picture Taking Time: 933ms
+[17:53:5 (1548021185474)] [ACTION] Compressing...
+[17:53:5 (1548021185499)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-20 (C1).jpeg
+[17:53:5 (1548021185499)] END OF RUNTIME
+[17:53:5 (1548021185499)] Runtime: 958ms - Error Count: 2
+
