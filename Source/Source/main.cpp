@@ -11,6 +11,7 @@
 #include <fstream>
 #include <sys/stat.h>
 #include <ctime>
+#include <raspicam/raspicam_cv.h>
 using namespace std;
 using namespace cv;
 
@@ -39,11 +40,10 @@ string getTime() {
 
 //grabs next frame from camera
 Mat capture(VideoCapture cap) {
-    cap.set(CAP_PROP_FRAME_WIDTH, 3280);
-    cap.set(CAP_PROP_FRAME_HEIGHT, 2464);
     Mat frame;
     cap.grab(); // grabs next frame
     cap.read(frame); // saves picture to frame
+    //cap.retrieve(frame); //this might be nesscessary
     return frame;
 }
 
@@ -94,7 +94,7 @@ void log(int level, const string &msg) {
 }
 
 int main(int argc, const char * argv[]) {
-    cout << CV_VERSION;
+    cout << CV_VERSION << endl;
     startTime = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count();
     errorCount = 0;
 
@@ -237,14 +237,18 @@ int main(int argc, const char * argv[]) {
     //TODO - Potentially implement multithreading here :)
     //camera 0
 
-    VideoCapture visble;
+    //VideoCapture camera0;
+    //configured for raspicam
+    RaspiCam_Cv camera0;
+    Mat picture0;
     if (visible) {
         log(99, "Using Camera 0...");
-        visble.open(0);
+        camera0.set(CAP_PROP_FORMAT, CV_8UC1); //raspi settings
+        camera0.open(0);
     }
-    Mat picture0;
+
     if (visble.isOpened()) {
-        picture0 = capture(visble);
+        picture0 = capture(camera0);
         log(99, "Camera 0 frame grab");
     }
     else if (visible)
@@ -252,15 +256,16 @@ int main(int argc, const char * argv[]) {
 
 
     // camera 1
-    VideoCapture NIR;
+    //configured for usb cam
+    VideoCapture camera1;
     if (useCam1) {
-        log(99, "Using NIR...");
-        NIR.open(1);
+        log(99, "Using camera 1...");
+        camera1.open(1);
     }
 
     Mat picture1;
-    if (NIR.isOpened()) {
-        picture1 = capture(NIR);
+    if (camera1.isOpened()) {
+        picture1 = capture(camera1);
         log(99, "Camera 1 frame grab");
 
     }
@@ -275,7 +280,7 @@ int main(int argc, const char * argv[]) {
 
     //checking if pictures saved, if saved, compress
     //camera 0
-    if (visble.isOpened()) {
+    if (camera0.isOpened()) {
         if (compress(picture0, filePath, fileName + " (C0)", compression))
             log(99, "Camera 0 Success! Saved at " + filePath + fileName + " (C1)" + "." + compression);
         else
@@ -283,7 +288,7 @@ int main(int argc, const char * argv[]) {
     }
 
     //camera 1
-    if (NIR.isOpened()) {
+    if (camera1.isOpened()) {
         if (compress(picture1, filePath, fileName + " (C1)", compression))
             log(99, "Camera 1 Success! Saved at " + filePath + fileName + " (C1)" + "." + compression);
         else
@@ -305,8 +310,8 @@ int main(int argc, const char * argv[]) {
     }
 
     //destroying
-    visble.release();
-    NIR.release();
+    camera0.release();
+    camera1.release();
     printer.close();
     return 0;
 }
