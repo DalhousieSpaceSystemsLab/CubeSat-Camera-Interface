@@ -96,22 +96,18 @@ void log(int level, const string &msg) {
 }
 
 int main(int argc, const char * argv[]) {
-    cout << CV_VERSION << endl;
     startTime = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count();
     errorCount = 0;
 
-    //TODO - check if the dir exists, might reduce time
     int dirResult = mkdir("Error Logs", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH); //creating directory with basic read/write permissions
-    if (dirResult != -1) {
-        cerr << "Error Creating Error Logs Folder";
+    if (dirResult != -1) { //-1 means folder already exists
+        cerr << "Creating new Error Logs Folder..." << endl;
         errorCount++;
-        //exit(1); //might be an idea to mitigate around this
     }
     dirResult = mkdir("Pictures", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH); //creating directory with basic read/write permissions
     if (dirResult != -1) {
-        cerr << "Error Creating Pictures Folder";
-        errorCount++;
-        //exit(1); //might be an idea to mitigate around this
+        cerr << "Creating new Pictures Folder..." << endl;
+
     }
 
     //parameters
@@ -135,7 +131,7 @@ int main(int argc, const char * argv[]) {
         arg = argv[i];
         if (arg == "-q") //no logs
             quiet = true;
-        else if (arg == "-nc0") //ignore camera 0
+        else if (arg == "-nC1") //ignore camera 0
             visible = false;
         else if (arg == "-nc1") //ignore camera 1
             useCam1 = false;
@@ -240,35 +236,36 @@ int main(int argc, const char * argv[]) {
     //TODO - Potentially implement multithreading here :)
     //camera 0
 
-    VideoCapture visble;
+    VideoCapture C0;
     if (visible) {
         log(99, "Using Camera 0...");
-        visble.open(0);
+        C0.open(0);
+    }
+    // camera 1
+    VideoCapture C1;
+    if (useCam1) {
+        log(99, "Using C1...");
+        C1.open(2);
     }
     Mat picture0;
-    if (visble.isOpened()) {
-        picture0 = capture(visble);
+    if (C0.isOpened()) {
+        picture0 = capture(C0);
         log(99, "Camera 0 frame grab");
     }
     else if (visible)
         log(2, "Camera 0 failed  to open");
 
-
-    // camera 1
-    VideoCapture NIR;
-    if (useCam1) {
-        log(99, "Using NIR...");
-        NIR.open(1);
-    }
-
     Mat picture1;
-    if (NIR.isOpened()) {
-        picture1 = capture(NIR);
+    if (C1.isOpened()) {
+        picture1 = capture(C1);
         log(99, "Camera 1 frame grab");
-
     }
     else if (useCam1)
         log(2, "Camera 1 failed to open");
+
+
+
+
 
     long endTime = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count();
     log(999, "Picture Taking Time: " + to_string(endTime - startTime) + "ms");
@@ -278,19 +275,18 @@ int main(int argc, const char * argv[]) {
 
     //checking if pictures saved, if saved, compress
     //camera 0
-    if (visble.isOpened()) {
-        if (compress(picture0, filePath, fileName + " (C0)", compression))
-            log(99, "Camera 0 Success! Saved at " + filePath + fileName + " (C1)" + "." + compression);
+    if (C0.isOpened()) {
+        if (compress(picture0, filePath, fileName + " (VIS)", compression)) //TODO - convert this back to C0
+            log(99, "Camera 0 Success! Saved at " + filePath + fileName + " (VIS)" + "." + compression);
         else
             log(1, "Camera 0 failed but opened, possible defect or bug");
     }
 
     //camera 1
-    if (NIR.isOpened()) {
-        if (compress(picture1, filePath, fileName + " (C1)", compression))
-            log(99, "Camera 1 Success! Saved at " + filePath + fileName + " (C1)" + "." + compression);
+    if (C1.isOpened()) {
+        if (compress(picture1, filePath, fileName + " (NIR)", compression)) //TODO - convert this back to C1
+            log(99, "Camera 1 Success! Saved at " + filePath + fileName + " (NIR)" + "." + compression);
         else
-
             log(1, "Camera 1 failed but opened, possible defect or bug");
     }
 
@@ -307,9 +303,16 @@ int main(int argc, const char * argv[]) {
         log(-1, "");
     }
 
+    string pictureSize = "du -h Pictures/" + fileName + "*";
+    string runTimeCmd = "echo 'Run Time: " + to_string(runTime) + "ms'";
+    system("echo 'File sizes: '");
+    system(pictureSize.c_str());
+    system(runTimeCmd.c_str());
+
+
     //destroying
-    visble.release();
-    NIR.release();
+    C0.release();
+    C1.release();
     printer.close();
     return 0;
 }
