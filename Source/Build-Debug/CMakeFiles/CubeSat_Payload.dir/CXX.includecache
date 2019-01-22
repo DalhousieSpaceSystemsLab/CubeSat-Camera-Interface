@@ -9,13 +9,17 @@
 /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp
 iostream
 -
-opencv2/opencv.hpp
--
 fstream
 -
 sys/stat.h
 -
 ctime
+-
+opencv2/core.hpp
+-
+opencv2/videoio.hpp
+-
+opencv2/imgcodecs.hpp
 -
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp

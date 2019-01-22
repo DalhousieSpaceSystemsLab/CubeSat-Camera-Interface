@@ -7,10 +7,14 @@
 //
 
 #include <iostream>
-#include <opencv2/opencv.hpp>
 #include <fstream>
 #include <sys/stat.h>
 #include <ctime>
+
+#include <opencv2/core.hpp> //core dependancies of opencv
+#include <opencv2/videoio.hpp> //VideoCapture
+#include <opencv2/imgcodecs.hpp> //imwrite
+
 using namespace std;
 using namespace cv;
 
@@ -92,7 +96,7 @@ void log(int level, const string &msg) {
 }
 
 int main(int argc, const char * argv[]) {
-    cout << CV_VERSION;
+    cout << CV_VERSION << endl;
     startTime = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count();
     errorCount = 0;
 
@@ -178,6 +182,7 @@ int main(int argc, const char * argv[]) {
                 }
             } else cerr << "missing compression string";
         }
+        //TODO think about implementing this
         else if (arg == "-iq") {
             if (i + 1 < argc) {
                 arg = argv[i + 1];

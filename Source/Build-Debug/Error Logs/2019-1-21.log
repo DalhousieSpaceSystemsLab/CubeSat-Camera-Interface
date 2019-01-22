@@ -1,0 +1,53 @@
+[22:52:26 (1548125546706)] START OF RUNTIME
+[22:52:26 (1548125546707)] [ACTION] Target file path is Pictures/2019-1-21.jpeg
+[22:52:26 (1548125546707)] [ACTION] Taking pictures...
+[22:52:26 (1548125546707)] [ACTION] Using Camera 0...
+[22:52:27 (1548125547592)] [ACTION] Camera 0 frame grab
+[22:52:27 (1548125547596)] [ACTION] Using NIR...
+[22:52:27 (1548125547596)] [MODERATE] Camera 1 failed to open
+[22:52:27 (1548125547596)] Picture Taking Time: 891ms
+[22:52:27 (1548125547596)] [ACTION] Compressing...
+[22:52:27 (1548125547613)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-21 (C1).jpeg
+[22:52:27 (1548125547613)] END OF RUNTIME
+[22:52:27 (1548125547613)] Runtime: 908ms - Error Count: 2
+
+[22:57:28 (1548125848982)] START OF RUNTIME
+[22:57:28 (1548125848982)] [ACTION] Target file path is Pictures/2019-1-21.jpeg
+[22:57:28 (1548125848982)] [ACTION] Taking pictures...
+[22:57:28 (1548125848982)] [ACTION] Using Camera 0...
+[22:57:29 (1548125849776)] [ACTION] Camera 0 frame grab
+[22:57:29 (1548125849776)] [ACTION] Using NIR...
+[22:57:29 (1548125849776)] [MODERATE] Camera 1 failed to open
+[22:57:29 (1548125849776)] Picture Taking Time: 794ms
+[22:57:29 (1548125849776)] [ACTION] Compressing...
+[22:57:29 (1548125849796)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-21 (C1).jpeg
+[22:57:29 (1548125849796)] END OF RUNTIME
+[22:57:29 (1548125849796)] Runtime: 814ms - Error Count: 1
+
+[22:57:38 (1548125858393)] START OF RUNTIME
+[22:57:38 (1548125858393)] [ACTION] Target file path is Pictures/2019-1-21.jpeg
+[22:57:38 (1548125858393)] [ACTION] Taking pictures...
+[22:57:38 (1548125858393)] [ACTION] Using Camera 0...
+[22:57:39 (1548125859194)] [ACTION] Camera 0 frame grab
+[22:57:39 (1548125859194)] [ACTION] Using NIR...
+[22:57:39 (1548125859194)] [MODERATE] Camera 1 failed to open
+[22:57:39 (1548125859194)] Picture Taking Time: 801ms
+[22:57:39 (1548125859195)] [ACTION] Compressing...
+[22:57:39 (1548125859213)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-21 (C1).jpeg
+[22:57:39 (1548125859214)] END OF RUNTIME
+[22:57:39 (1548125859214)] Runtime: 821ms - Error Count: 1
+
+[22:57:51 (1548125871334)] START OF RUNTIME
+[22:57:51 (1548125871334)] [ACTION] New compression detected! Saving file as png
+[22:57:51 (1548125871334)] [ACTION] Target file path is Pictures/2019-1-21.png
+[22:57:51 (1548125871334)] [ACTION] Taking pictures...
+[22:57:51 (1548125871334)] [ACTION] Using Camera 0...
+[22:57:52 (1548125872125)] [ACTION] Camera 0 frame grab
+[22:57:52 (1548125872125)] [ACTION] Using NIR...
+[22:57:52 (1548125872125)] [MODERATE] Camera 1 failed to open
+[22:57:52 (1548125872125)] Picture Taking Time: 791ms
+[22:57:52 (1548125872125)] [ACTION] Compressing...
+[22:57:52 (1548125872152)] [ACTION] Camera 0 Success! Saved at Pictures/2019-1-21 (C1).png
+[22:57:52 (1548125872152)] END OF RUNTIME
+[22:57:52 (1548125872152)] Runtime: 818ms - Error Count: 1
+
