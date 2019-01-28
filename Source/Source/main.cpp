@@ -241,12 +241,6 @@ int main(int argc, const char * argv[]) {
         log(99, "Using Camera 0...");
         C0.open(0);
     }
-    // camera 1
-    VideoCapture C1;
-    if (useCam1) {
-        log(99, "Using C1...");
-        C1.open(2);
-    }
     Mat picture0;
     if (C0.isOpened()) {
         picture0 = capture(C0);
@@ -255,6 +249,12 @@ int main(int argc, const char * argv[]) {
     else if (visible)
         log(2, "Camera 0 failed  to open");
 
+    // camera 1
+    VideoCapture C1;
+    if (useCam1) {
+        log(99, "Using C1...");
+        C1.open(2);
+    }
     Mat picture1;
     if (C1.isOpened()) {
         picture1 = capture(C1);
