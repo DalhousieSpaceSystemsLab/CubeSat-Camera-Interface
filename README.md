@@ -20,7 +20,7 @@ This software will function as the interface between the camera modules (Color a
   - Specifically, core, imgproc, imgcodecs modules will be used
 - [CMake](https://cmake.org/)
   - Used to compile OpenCV with the main script
-- [Docker](https://www.docker.com/) *(optional)
+- [Docker](https://www.docker.com/) *(optional)*
   - Docker repo with OpenCV can be found at liamhebert/cubesat-payload
 - *Dependencies may increase as development progresses*
 
