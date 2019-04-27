@@ -6,10 +6,10 @@
 //  Copyright © 2018 Dal Orbital Science & Space Lab. All rights reserved.
 //
 
-#include <iostream>
-#include <fstream>
-#include <sys/stat.h>
-#include <ctime>
+#include <iostream> //printing to console (cerr)
+#include <fstream> //creating a log file
+#include <sys/stat.h> //mkdir
+#include <ctime> //localtime
 
 #include <opencv2/core.hpp> //core dependancies of opencv
 #include <opencv2/videoio.hpp> //VideoCapture
@@ -253,8 +253,10 @@ int main(int argc, const char * argv[]) {
     VideoCapture C1;
     if (useCam1) {
         log(99, "Using C1...");
-        C1.open(2);
+        C1.open(1);
     }
+
+
     Mat picture1;
     if (C1.isOpened()) {
         picture1 = capture(C1);

@@ -39,6 +39,7 @@ CMakeFiles/CubeSat_Payload.dir/main.cpp.o
  /usr/local/include/opencv4/opencv2/dnn/dnn.hpp
  /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp
  /usr/local/include/opencv4/opencv2/dnn/layer.hpp
+ /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp
  /usr/local/include/opencv4/opencv2/dnn/version.hpp
  /usr/local/include/opencv4/opencv2/features2d.hpp
  /usr/local/include/opencv4/opencv2/flann.hpp

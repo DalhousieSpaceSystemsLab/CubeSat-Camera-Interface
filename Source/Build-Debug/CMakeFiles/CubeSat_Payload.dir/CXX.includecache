@@ -365,6 +365,8 @@ opencv2/dnn/layer.hpp
 -
 opencv2/dnn/dnn.inl.hpp
 -
+opencv2/dnn/utils/inference_engine.hpp
+-
 
 /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp
 opencv2/dnn.hpp
@@ -373,6 +375,10 @@ opencv2/dnn.hpp
 /usr/local/include/opencv4/opencv2/dnn/layer.hpp
 opencv2/dnn.hpp
 -
+
+/usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp
+../dnn.hpp
+/usr/local/include/opencv4/opencv2/dnn/dnn.hpp
 
 /usr/local/include/opencv4/opencv2/dnn/version.hpp
 
