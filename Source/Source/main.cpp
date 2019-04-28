@@ -6,22 +6,26 @@
 //  Copyright © 2018 Dal Orbital Science & Space Lab. All rights reserved.
 //
 
-#include <iostream> //printing to console (cerr)
-#include <fstream> //creating a log file
-#include <sys/stat.h> //mkdir
-#include <ctime> //localtime
-
-#include <opencv2/core.hpp> //core dependancies of opencv
-#include <opencv2/videoio.hpp> //VideoCapture
-#include <opencv2/imgcodecs.hpp> //imwrite
-
-using namespace std;
-using namespace cv;
+#include "main.hpp"
 
 static int errorCount;
 static long startTime;
 static bool quiet;
 static ofstream printer;
+
+
+// struct parameters_t {
+//   string date;
+//   bool quiet;
+//   bool visible;
+//   int ignore; //1 = ignore 1, 2 = ignore 2, 3 = ignore all, 0 = ignore none
+//   string filePath;
+//   string fileName;
+//   string compression;
+//   int quality;
+// } param;
+
+
 
 //gets today's date in YYYY-MM-DD format
 string getDate() {
@@ -42,10 +46,10 @@ string getTime() {
 }
 
 //grabs next frame from camera
-Mat capture(VideoCapture cap) {
+Mat capture(VideoCapture *cap) {
     Mat frame;
-    cap.grab(); // grabs next frame
-    cap.read(frame); // saves picture to frame
+    (*cap).grab(); // grabs next frame
+    (*cap).read(frame); // saves picture to frame
     return frame;
 }
 
@@ -54,10 +58,8 @@ bool compress(const Mat &frame, const string &path, const string &name, const st
     return imwrite(path + name + "." + compression, frame);
 }
 
-
-
 //logs errors and actions into Error Logs/(date).txt
-void log(int level, const string &msg) {
+void log(const int level, const string &msg) {
     if (!quiet) { //if quiet, no logs are created
         if (!printer.is_open()) {
             cerr << "[" << getTime() << "] " << "ErrorLog Failed to open, no errors today!" << endl;
@@ -96,18 +98,18 @@ void log(int level, const string &msg) {
 }
 
 int main(int argc, const char * argv[]) {
+
     startTime = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count();
     errorCount = 0;
 
-    int dirResult = mkdir("Error Logs", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH); //creating directory with basic read/write permissions
+    int dirResult = mkdir("Error Logs", S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH); //creating dir w/ rwx-rx-rx
     if (dirResult != -1) { //-1 means folder already exists
-        cerr << "Creating new Error Logs Folder..." << endl;
+        cout << "Creating new Error Logs Folder..." << endl;
         errorCount++;
     }
-    dirResult = mkdir("Pictures", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH); //creating directory with basic read/write permissions
+    dirResult = mkdir("Pictures", S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH); //creating dir w/ rwx-rx-rx
     if (dirResult != -1) {
-        cerr << "Creating new Pictures Folder..." << endl;
-
+        cout << "Creating new Pictures Folder..." << endl;
     }
 
     //parameters
@@ -237,13 +239,15 @@ int main(int argc, const char * argv[]) {
     //camera 0
 
     VideoCapture C0;
+    VideoCapture * pC0 = &C0;
     if (visible) {
         log(99, "Using Camera 0...");
         C0.open(0);
+        log(99, "Survived C0");
     }
     Mat picture0;
     if (C0.isOpened()) {
-        picture0 = capture(C0);
+        picture0 = capture(pC0);
         log(99, "Camera 0 frame grab");
     }
     else if (visible)
@@ -251,6 +255,7 @@ int main(int argc, const char * argv[]) {
 
     // camera 1
     VideoCapture C1;
+    VideoCapture *pC1 = &C1;
     if (useCam1) {
         log(99, "Using C1...");
         C1.open(1);
@@ -259,7 +264,7 @@ int main(int argc, const char * argv[]) {
 
     Mat picture1;
     if (C1.isOpened()) {
-        picture1 = capture(C1);
+        picture1 = capture(pC1);
         log(99, "Camera 1 frame grab");
     }
     else if (useCam1)
