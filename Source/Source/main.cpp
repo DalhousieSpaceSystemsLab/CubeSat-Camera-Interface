@@ -14,16 +14,15 @@ static bool quiet;
 static ofstream printer;
 
 
-// struct parameters_t {
-//   string date;
-//   bool quiet;
-//   bool visible;
-//   int ignore; //1 = ignore 1, 2 = ignore 2, 3 = ignore all, 0 = ignore none
-//   string filePath;
-//   string fileName;
-//   string compression;
-//   int quality;
-// } param;
+struct parameters_t {
+  string date;
+  bool quiet;
+  int ignore; //1 = ignore 1, 2 = ignore 2, 3 = ignore all, 0 = ignore none
+  string filePath;
+  string fileName;
+  string compression;
+  int quality;
+};
 
 
 
@@ -113,38 +112,51 @@ int main(int argc, const char * argv[]) {
     }
 
     //parameters
-    string date = getDate();
-    quiet = false;
-    bool visible = true;
-    bool useCam1 = true;
-    bool defaultPath = true;
-    string filePath = "Pictures/";
-    bool defaultName = true;
-    string fileName = date;
-    bool defaultCompression = true;
-    string compression = "jpeg";
-    bool defaultImageQuality = true;
-    int imageQualityJPEG = 95;
-    int imageQualityPNG = 7; //note this will be applied as 10 - 7;
+    parameters_t * param = (parameters_t *) malloc(sizeof(parameters_t));
+    param -> date = getDate();
+    //string date = getDate();
+    param -> quiet = false;
+    //quiet = false;
+    //bool useCam0 = true;
+    //bool useCam1 = true;
+    param -> ignore = 0;
+    //bool defaultPath = true;
+    //string filePath = "Pictures/";
+    param -> filePath = "Pictures/";
+    //bool defaultName = true;
+    //string fileName = date;
+    param -> fileName = param -> date;
+    //bool defaultCompression = true;
+    //string compression = "jpeg";
+    param -> compression = "jpeg";
+    //bool defaultImageQuality = true;
+    //int imageQualityJPEG = 95;
+    param -> quality = 95;
 
     //gathering commandline args
     string arg;
     for (int i = 1; i < argc; i++) { //sadly switch statements cannot be used here without hashing, which has the potential to be inaccurate and is not worth the time loss
         arg = argv[i];
         if (arg == "-q") //no logs
-            quiet = true;
-        else if (arg == "-nC1") //ignore camera 0
-            visible = false;
-        else if (arg == "-nc1") //ignore camera 1
-            useCam1 = false;
+            param -> quiet = true;
+        else if (arg == "-nc0") {//ignore camera 0
+          if (param -> ignore == 2)  //we have already ignored camera 1
+            param -> ignore = 3;
+          else
+            param -> ignore = 1;
+        }
+        else if (arg == "-nc1") {//ignore camera 1
+          if (param -> ignore == 1)  //we have already ignored camera 0
+            param -> ignore = 3;
+          else
+            param -> ignore = 2;
+        }
         //same process yes, but every time different values. Methoding this would have a massive argument list, not worth
         else if (arg == "-p") { //custom path
             if (i + 1 < argc) { //room for filename
                 arg = argv[i + 1];
                 if (arg.at(0) != '-') { //valid format
-                    filePath = arg;
-                    defaultPath = false;
-                    i++;
+                    param -> filePath = arg;
                 }
                 else {
                     arg = argv[i];
@@ -156,8 +168,7 @@ int main(int argc, const char * argv[]) {
             if (i + 1 < argc) {
                 arg = argv[i + 1];
                 if (arg.at(0) != '-') {
-                    fileName = arg;
-                    defaultName = false;
+                    param -> fileName = arg;
                     i++;
                 }
                 else {
@@ -170,8 +181,7 @@ int main(int argc, const char * argv[]) {
             if (i + 1 < argc) {
                 arg = argv[i + 1];
                 if (arg.at(0) != '-') {
-                    compression = arg;
-                    defaultCompression = false;
+                    param -> compression = arg;
                     i++;
                 }
                 else {
@@ -185,8 +195,7 @@ int main(int argc, const char * argv[]) {
             if (i + 1 < argc) {
                 arg = argv[i + 1];
                 if (arg.at(0) != '-') {
-                    imageQualityJPEG = stoi(arg); //will check what the real format is later
-                    defaultImageQuality = false;
+                    param -> quality = stoi(arg); //will check what the real format is later
                     i++;
                 }
                 else {
@@ -198,65 +207,68 @@ int main(int argc, const char * argv[]) {
     }
 
 
-    if (!quiet) { //create logs if not in quiet mode
-        printer.open("Error Logs/" + date + ".log", ios_base::app); //opening file or creating new one if does not exist
+    if (!(param -> quiet)) { //create logs if not in quiet mode
+        printer.open("Error Logs/" + param -> date + ".log", ios_base::app); //opening file or creating new one if does not exist
         log(999, "START OF RUNTIME"); //I know what you are thinking, I lied here. shhhh
-    }
 
-    if (!defaultPath) //no custom path
-        log(99, "New file path detected! Saving path as " + filePath);
+        //talk about settings used
+        log(999, "--------------------------------");
+        log(99, "SETTINGS");
+        log(999, "Date: " + param -> date);
+        log(999, "Quiet Mode: " + to_string(param -> quiet));
+        log(999, "Ignore Status: " + to_string(param -> ignore));
+        log(999, "File Path: " + param -> filePath);
+        log(999, "File Name: " + param -> fileName);
+        log(999, "Compression: " + param -> compression);
+        log(999, "Quality Setting: " + to_string(param -> quality));
+        log(999, "--------------------------------");
+      }
 
-    if (!defaultName) //no custom file name
-        log(99, "New file name detected! Saving file name as " + fileName);
-
-    if (!defaultCompression) //no custom compression method
-        log(99, "New compression detected! Saving file as " + compression);
-
-    if (!defaultImageQuality) {
-        if (compression == "jpeg") {
-            log(99, "Compression level for JPEG detected! Setting compression as " + to_string(imageQualityJPEG));
-        }
-        else if (compression == "png") {
-            imageQualityPNG = imageQualityJPEG % 10;
-            log(99, "Compression level for PNG detected! Setting png compression level as " + to_string(imageQualityPNG));
-        }
-        else
-            log(2, "Compression level detected, but invalid compression format (only JPEG and PNG supported), using default settings for " + compression);
-    }
-
-
-    log(99, "Target file path is " + filePath + fileName + "." + compression);
-
-
+    // if (! ((param -> filePath).compare("Pictures/"))) //no custom path
+    //     log(99, "New file path detected! Saving path as " + param -> filePath);
+    //
+    // if (! ((defaultName) //no custom file name
+    //     log(99, "New file name detected! Saving file name as " + param -> fileName);
+    //
+    // if (!defaultCompression) //no custom compression method
+    //     log(99, "New compression detected! Saving file as " + param -> compression);
+    //
+    // if (!defaultImageQuality) {
+    //     if (compression == "jpeg") {
+    //         log(99, "Compression level for JPEG detected! Setting compression as " + to_string(imageQualityJPEG));
+    //     }
+    //     else if (compression == "png") {
+    //         imageQualityPNG = imageQualityJPEG % 10;
+    //         log(99, "Compression level for PNG detected! Setting png compression level as " + to_string(imageQualityPNG));
+    //     }
+    //     else
+    //         log(2, "Compression level detected, but invalid compression format (only JPEG and PNG supported), using default settings for " + compression);
+    // }
     //take picture and test for success
 
     log(99, "Taking pictures...");
-
-
-
 
     //TODO - Potentially implement multithreading here :)
     //camera 0
 
     VideoCapture C0;
     VideoCapture * pC0 = &C0;
-    if (visible) {
+    if (param -> ignore != 1 && param -> ignore != 3) {
         log(99, "Using Camera 0...");
         C0.open(0);
-        log(99, "Survived C0");
     }
     Mat picture0;
     if (C0.isOpened()) {
         picture0 = capture(pC0);
         log(99, "Camera 0 frame grab");
     }
-    else if (visible)
+    else if (param -> ignore != 1 && param -> ignore != 3)
         log(2, "Camera 0 failed  to open");
 
     // camera 1
     VideoCapture C1;
     VideoCapture *pC1 = &C1;
-    if (useCam1) {
+    if (param -> ignore != 2 && param -> ignore != 3) {
         log(99, "Using C1...");
         C1.open(1);
     }
@@ -267,7 +279,7 @@ int main(int argc, const char * argv[]) {
         picture1 = capture(pC1);
         log(99, "Camera 1 frame grab");
     }
-    else if (useCam1)
+    else if (param -> ignore != 2 && param -> ignore != 3 )
         log(2, "Camera 1 failed to open");
 
 
@@ -283,16 +295,16 @@ int main(int argc, const char * argv[]) {
     //checking if pictures saved, if saved, compress
     //camera 0
     if (C0.isOpened()) {
-        if (compress(picture0, filePath, fileName + " (VIS)", compression)) //TODO - convert this back to C0
-            log(99, "Camera 0 Success! Saved at " + filePath + fileName + " (VIS)" + "." + compression);
+        if (compress(picture0, param -> filePath, param -> fileName + " (VIS)", param -> compression)) //TODO - convert this back to C0
+            log(99, "Camera 0 Success! Saved at " + param -> filePath + param -> fileName + " (VIS)" + "." + param -> compression);
         else
             log(1, "Camera 0 failed but opened, possible defect or bug");
     }
 
     //camera 1
     if (C1.isOpened()) {
-        if (compress(picture1, filePath, fileName + " (NIR)", compression)) //TODO - convert this back to C1
-            log(99, "Camera 1 Success! Saved at " + filePath + fileName + " (NIR)" + "." + compression);
+        if (compress(picture1, param -> filePath, param -> fileName + " (NIR)", param -> compression)) //TODO - convert this back to C1
+            log(99, "Camera 1 Success! Saved at " + param -> filePath + param -> fileName + " (NIR)" + "." + param -> compression);
         else
             log(1, "Camera 1 failed but opened, possible defect or bug");
     }
@@ -310,7 +322,7 @@ int main(int argc, const char * argv[]) {
         log(-1, "");
     }
 
-    string pictureSize = "du -h Pictures/" + fileName + "*";
+    string pictureSize = "du -h Pictures/" + param -> fileName + "*";
     string runTimeCmd = "echo 'Run Time: " + to_string(runTime) + "ms'";
     system("echo 'File sizes: '");
     system(pictureSize.c_str());
@@ -321,5 +333,6 @@ int main(int argc, const char * argv[]) {
     C0.release();
     C1.release();
     printer.close();
+    free(param);
     return 0;
 }

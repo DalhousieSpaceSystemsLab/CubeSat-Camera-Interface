@@ -3,6 +3,7 @@
 
 CMakeFiles/CubeSat_Payload.dir/main.cpp.o
  /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp
+ /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.hpp
  /usr/local/include/opencv4/opencv2/calib3d.hpp
  /usr/local/include/opencv4/opencv2/core.hpp
  /usr/local/include/opencv4/opencv2/core/affine.hpp

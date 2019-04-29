@@ -17,8 +17,11 @@ cmakeBuild() {
   result=$?
   echo ""
   if (( $result != 0 )); then
+    echo -e "${RED}[ERROR]${RESET} CMake process failed";
     cmakeSuccess=0
   else
+    echo -e "${GREEN}[OK]${RESET} CMake Success!"
+    echo ""
     cmakeSuccess=1
   fi
 }
@@ -30,8 +33,11 @@ compile() {
   result=$?
   echo ""
   if (( $result != 0 )); then
+    echo -e "${RED}[ERROR]${RESET} Compile process failed";
     compileSuccess=0
   else
+    echo -e "${GREEN}[OK]${RESET} Compile Success!"
+    echo ""
     compileSuccess=1
   fi
 }
