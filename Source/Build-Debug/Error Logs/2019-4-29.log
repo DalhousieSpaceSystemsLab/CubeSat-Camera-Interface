@@ -1,0 +1,264 @@
+[14:21:28 (1556558488972)] START OF RUNTIME
+[14:21:28 (1556558488972)] --------------------------------
+[14:21:28 (1556558488972)] [ACTION] SETTINGS
+[14:21:28 (1556558488972)] Date: 2019-4-29
+[14:21:28 (1556558488972)] Quiet Mode: 0
+[14:21:28 (1556558488972)] Ignore Status: 0
+[14:21:28 (1556558488972)] File Path: Pictures/
+[14:21:28 (1556558488972)] File Name: 2019-4-29
+[14:21:28 (1556558488972)] Compression: jpeg
+[14:21:28 (1556558488972)] Quality Setting: 95
+[14:21:28 (1556558488972)] --------------------------------
+[14:21:28 (1556558488972)] [ACTION] Taking pictures...
+[14:21:28 (1556558488972)] [ACTION] Using Camera 0...
+[14:21:29 (1556558489795)] [ACTION] Camera 0 frame grab
+[14:21:29 (1556558489795)] [ACTION] Using C1...
+[14:21:29 (1556558489795)] [MODERATE] Camera 1 failed to open
+[14:21:29 (1556558489795)] Picture Taking Time: 823ms
+[14:21:29 (1556558489795)] [ACTION] Compressing...
+[14:21:29 (1556558489823)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:21:29 (1556558489823)] END OF RUNTIME
+[14:21:29 (1556558489823)] Runtime: 851ms - Error Count: 1
+
+[14:21:32 (1556558492134)] START OF RUNTIME
+[14:21:32 (1556558492134)] --------------------------------
+[14:21:32 (1556558492134)] [ACTION] SETTINGS
+[14:21:32 (1556558492134)] Date: 2019-4-29
+[14:21:32 (1556558492134)] Quiet Mode: 0
+[14:21:32 (1556558492134)] Ignore Status: 0
+[14:21:32 (1556558492134)] File Path: Pictures/
+[14:21:32 (1556558492134)] File Name: 2019-4-29
+[14:21:32 (1556558492134)] Compression: jpeg
+[14:21:32 (1556558492134)] Quality Setting: 95
+[14:21:32 (1556558492134)] --------------------------------
+[14:21:32 (1556558492134)] [ACTION] Taking pictures...
+[14:21:32 (1556558492134)] [ACTION] Using Camera 0...
+[14:21:32 (1556558492894)] [ACTION] Camera 0 frame grab
+[14:21:32 (1556558492894)] [ACTION] Using C1...
+[14:21:32 (1556558492894)] [MODERATE] Camera 1 failed to open
+[14:21:32 (1556558492894)] Picture Taking Time: 761ms
+[14:21:32 (1556558492894)] [ACTION] Compressing...
+[14:21:32 (1556558492920)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:21:32 (1556558492920)] END OF RUNTIME
+[14:21:32 (1556558492920)] Runtime: 787ms - Error Count: 1
+
+[14:21:34 (1556558494402)] START OF RUNTIME
+[14:21:34 (1556558494402)] --------------------------------
+[14:21:34 (1556558494402)] [ACTION] SETTINGS
+[14:21:34 (1556558494402)] Date: 2019-4-29
+[14:21:34 (1556558494402)] Quiet Mode: 0
+[14:21:34 (1556558494402)] Ignore Status: 0
+[14:21:34 (1556558494402)] File Path: Pictures/
+[14:21:34 (1556558494402)] File Name: 2019-4-29
+[14:21:34 (1556558494402)] Compression: jpeg
+[14:21:34 (1556558494402)] Quality Setting: 95
+[14:21:34 (1556558494402)] --------------------------------
+[14:21:34 (1556558494402)] [ACTION] Taking pictures...
+[14:21:34 (1556558494402)] [ACTION] Using Camera 0...
+[14:21:35 (1556558495151)] [ACTION] Camera 0 frame grab
+[14:21:35 (1556558495151)] [ACTION] Using C1...
+[14:21:35 (1556558495151)] [MODERATE] Camera 1 failed to open
+[14:21:35 (1556558495151)] Picture Taking Time: 749ms
+[14:21:35 (1556558495152)] [ACTION] Compressing...
+[14:21:35 (1556558495186)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:21:35 (1556558495186)] END OF RUNTIME
+[14:21:35 (1556558495186)] Runtime: 784ms - Error Count: 1
+
+[14:21:36 (1556558496312)] START OF RUNTIME
+[14:21:36 (1556558496312)] --------------------------------
+[14:21:36 (1556558496312)] [ACTION] SETTINGS
+[14:21:36 (1556558496312)] Date: 2019-4-29
+[14:21:36 (1556558496312)] Quiet Mode: 0
+[14:21:36 (1556558496312)] Ignore Status: 0
+[14:21:36 (1556558496312)] File Path: Pictures/
+[14:21:36 (1556558496312)] File Name: 2019-4-29
+[14:21:36 (1556558496312)] Compression: jpeg
+[14:21:36 (1556558496312)] Quality Setting: 95
+[14:21:36 (1556558496312)] --------------------------------
+[14:21:36 (1556558496312)] [ACTION] Taking pictures...
+[14:21:36 (1556558496312)] [ACTION] Using Camera 0...
+[14:21:37 (1556558497055)] [ACTION] Camera 0 frame grab
+[14:21:37 (1556558497055)] [ACTION] Using C1...
+[14:21:37 (1556558497055)] [MODERATE] Camera 1 failed to open
+[14:21:37 (1556558497055)] Picture Taking Time: 743ms
+[14:21:37 (1556558497055)] [ACTION] Compressing...
+[14:21:37 (1556558497081)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:21:37 (1556558497081)] END OF RUNTIME
+[14:21:37 (1556558497081)] Runtime: 769ms - Error Count: 1
+
+[14:21:38 (1556558498148)] START OF RUNTIME
+[14:21:38 (1556558498148)] --------------------------------
+[14:21:38 (1556558498148)] [ACTION] SETTINGS
+[14:21:38 (1556558498148)] Date: 2019-4-29
+[14:21:38 (1556558498148)] Quiet Mode: 0
+[14:21:38 (1556558498148)] Ignore Status: 0
+[14:21:38 (1556558498148)] File Path: Pictures/
+[14:21:38 (1556558498148)] File Name: 2019-4-29
+[14:21:38 (1556558498148)] Compression: jpeg
+[14:21:38 (1556558498148)] Quality Setting: 95
+[14:21:38 (1556558498148)] --------------------------------
+[14:21:38 (1556558498148)] [ACTION] Taking pictures...
+[14:21:38 (1556558498148)] [ACTION] Using Camera 0...
+[14:21:38 (1556558498911)] [ACTION] Camera 0 frame grab
+[14:21:38 (1556558498911)] [ACTION] Using C1...
+[14:21:38 (1556558498911)] [MODERATE] Camera 1 failed to open
+[14:21:38 (1556558498911)] Picture Taking Time: 763ms
+[14:21:38 (1556558498911)] [ACTION] Compressing...
+[14:21:38 (1556558498937)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:21:38 (1556558498937)] END OF RUNTIME
+[14:21:38 (1556558498937)] Runtime: 789ms - Error Count: 1
+
+[14:21:40 (1556558500435)] START OF RUNTIME
+[14:21:40 (1556558500436)] --------------------------------
+[14:21:40 (1556558500436)] [ACTION] SETTINGS
+[14:21:40 (1556558500436)] Date: 2019-4-29
+[14:21:40 (1556558500436)] Quiet Mode: 0
+[14:21:40 (1556558500436)] Ignore Status: 0
+[14:21:40 (1556558500436)] File Path: Pictures/
+[14:21:40 (1556558500436)] File Name: 2019-4-29
+[14:21:40 (1556558500436)] Compression: jpeg
+[14:21:40 (1556558500436)] Quality Setting: 95
+[14:21:40 (1556558500436)] --------------------------------
+[14:21:40 (1556558500436)] [ACTION] Taking pictures...
+[14:21:40 (1556558500436)] [ACTION] Using Camera 0...
+[14:21:41 (1556558501184)] [ACTION] Camera 0 frame grab
+[14:21:41 (1556558501184)] [ACTION] Using C1...
+[14:21:41 (1556558501184)] [MODERATE] Camera 1 failed to open
+[14:21:41 (1556558501184)] Picture Taking Time: 749ms
+[14:21:41 (1556558501184)] [ACTION] Compressing...
+[14:21:41 (1556558501208)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:21:41 (1556558501208)] END OF RUNTIME
+[14:21:41 (1556558501208)] Runtime: 773ms - Error Count: 1
+
+[14:21:46 (1556558506822)] START OF RUNTIME
+[14:21:46 (1556558506822)] --------------------------------
+[14:21:46 (1556558506822)] [ACTION] SETTINGS
+[14:21:46 (1556558506822)] Date: 2019-4-29
+[14:21:46 (1556558506822)] Quiet Mode: 0
+[14:21:46 (1556558506822)] Ignore Status: 0
+[14:21:46 (1556558506822)] File Path: Pictures/
+[14:21:46 (1556558506822)] File Name: 2019-4-29
+[14:21:46 (1556558506822)] Compression: jpeg
+[14:21:46 (1556558506822)] Quality Setting: 95
+[14:21:46 (1556558506822)] --------------------------------
+[14:21:46 (1556558506822)] [ACTION] Taking pictures...
+[14:21:46 (1556558506822)] [ACTION] Using Camera 0...
+[14:21:47 (1556558507577)] [ACTION] Camera 0 frame grab
+[14:21:47 (1556558507577)] [ACTION] Using C1...
+[14:21:47 (1556558507577)] [MODERATE] Camera 1 failed to open
+[14:21:47 (1556558507577)] Picture Taking Time: 755ms
+[14:21:47 (1556558507577)] [ACTION] Compressing...
+[14:21:47 (1556558507602)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:21:47 (1556558507602)] END OF RUNTIME
+[14:21:47 (1556558507602)] Runtime: 780ms - Error Count: 1
+
+[14:23:56 (1556558636710)] START OF RUNTIME
+[14:23:56 (1556558636710)] --------------------------------
+[14:23:56 (1556558636710)] [ACTION] SETTINGS
+[14:23:56 (1556558636710)] Date: 2019-4-29
+[14:23:56 (1556558636710)] Quiet Mode: 0
+[14:23:56 (1556558636710)] Ignore Status: 0
+[14:23:56 (1556558636710)] File Path: Pictures/
+[14:23:56 (1556558636710)] File Name: 2019-4-29
+[14:23:56 (1556558636710)] Compression: jpeg
+[14:23:56 (1556558636710)] Quality Setting: 95
+[14:23:56 (1556558636710)] --------------------------------
+[14:23:56 (1556558636710)] [ACTION] Taking pictures...
+[14:23:56 (1556558636710)] [ACTION] Using Camera 0...
+[14:23:57 (1556558637485)] [ACTION] Camera 0 frame grab
+[14:23:57 (1556558637485)] [ACTION] Using C1...
+[14:23:57 (1556558637485)] [MODERATE] Camera 1 failed to open
+[14:23:57 (1556558637485)] Picture Taking Time: 775ms
+[14:23:57 (1556558637485)] [ACTION] Compressing...
+[14:23:57 (1556558637521)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:23:57 (1556558637521)] END OF RUNTIME
+[14:23:57 (1556558637521)] Runtime: 811ms - Error Count: 1
+
+[14:24:15 (1556558655624)] START OF RUNTIME
+[14:24:15 (1556558655624)] --------------------------------
+[14:24:15 (1556558655624)] [ACTION] SETTINGS
+[14:24:15 (1556558655624)] Date: 2019-4-29
+[14:24:15 (1556558655624)] Quiet Mode: 0
+[14:24:15 (1556558655624)] Ignore Status: 0
+[14:24:15 (1556558655624)] File Path: Pictures/
+[14:24:15 (1556558655624)] File Name: 2019-4-29
+[14:24:15 (1556558655624)] Compression: jpeg
+[14:24:15 (1556558655624)] Quality Setting: 95
+[14:24:15 (1556558655624)] --------------------------------
+[14:24:15 (1556558655624)] [ACTION] Taking pictures...
+[14:24:15 (1556558655624)] [ACTION] Using Camera 0...
+[14:24:16 (1556558656385)] [ACTION] Camera 0 frame grab
+[14:24:16 (1556558656385)] [ACTION] Using C1...
+[14:24:16 (1556558656385)] [MODERATE] Camera 1 failed to open
+[14:24:16 (1556558656385)] Picture Taking Time: 762ms
+[14:24:16 (1556558656385)] [ACTION] Compressing...
+[14:24:16 (1556558656409)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:24:16 (1556558656409)] END OF RUNTIME
+[14:24:16 (1556558656409)] Runtime: 786ms - Error Count: 1
+
+[14:24:18 (1556558658478)] START OF RUNTIME
+[14:24:18 (1556558658478)] --------------------------------
+[14:24:18 (1556558658478)] [ACTION] SETTINGS
+[14:24:18 (1556558658478)] Date: 2019-4-29
+[14:24:18 (1556558658478)] Quiet Mode: 0
+[14:24:18 (1556558658478)] Ignore Status: 0
+[14:24:18 (1556558658478)] File Path: Pictures/
+[14:24:18 (1556558658478)] File Name: 2019-4-29
+[14:24:18 (1556558658478)] Compression: jpeg
+[14:24:18 (1556558658478)] Quality Setting: 95
+[14:24:18 (1556558658478)] --------------------------------
+[14:24:18 (1556558658478)] [ACTION] Taking pictures...
+[14:24:18 (1556558658478)] [ACTION] Using Camera 0...
+[14:24:19 (1556558659228)] [ACTION] Camera 0 frame grab
+[14:24:19 (1556558659228)] [ACTION] Using C1...
+[14:24:19 (1556558659229)] [MODERATE] Camera 1 failed to open
+[14:24:19 (1556558659229)] Picture Taking Time: 751ms
+[14:24:19 (1556558659229)] [ACTION] Compressing...
+[14:24:19 (1556558659252)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:24:19 (1556558659252)] END OF RUNTIME
+[14:24:19 (1556558659252)] Runtime: 774ms - Error Count: 1
+
+[14:25:56 (1556558756933)] START OF RUNTIME
+[14:25:56 (1556558756933)] --------------------------------
+[14:25:56 (1556558756933)] [ACTION] SETTINGS
+[14:25:56 (1556558756933)] Date: 2019-4-29
+[14:25:56 (1556558756933)] Quiet Mode: 0
+[14:25:56 (1556558756933)] Ignore Status: 0
+[14:25:56 (1556558756933)] File Path: Pictures/
+[14:25:56 (1556558756933)] File Name: 2019-4-29
+[14:25:56 (1556558756933)] Compression: jpeg
+[14:25:56 (1556558756933)] Quality Setting: 95
+[14:25:56 (1556558756933)] --------------------------------
+[14:25:56 (1556558756933)] [ACTION] Taking pictures...
+[14:25:56 (1556558756933)] [ACTION] Using Camera 0...
+[14:25:57 (1556558757685)] [ACTION] Camera 0 frame grab
+[14:25:57 (1556558757685)] [ACTION] Using C1...
+[14:25:57 (1556558757685)] [MODERATE] Camera 1 failed to open
+[14:25:57 (1556558757685)] Picture Taking Time: 752ms
+[14:25:57 (1556558757685)] [ACTION] Compressing...
+[14:25:57 (1556558757711)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:25:57 (1556558757711)] END OF RUNTIME
+[14:25:57 (1556558757711)] Runtime: 778ms - Error Count: 1
+
+[14:25:59 (1556558759748)] START OF RUNTIME
+[14:25:59 (1556558759748)] --------------------------------
+[14:25:59 (1556558759748)] [ACTION] SETTINGS
+[14:25:59 (1556558759748)] Date: 2019-4-29
+[14:25:59 (1556558759748)] Quiet Mode: 0
+[14:25:59 (1556558759748)] Ignore Status: 0
+[14:25:59 (1556558759748)] File Path: Pictures/
+[14:25:59 (1556558759748)] File Name: 2019-4-29
+[14:25:59 (1556558759748)] Compression: jpeg
+[14:25:59 (1556558759748)] Quality Setting: 95
+[14:25:59 (1556558759748)] --------------------------------
+[14:25:59 (1556558759748)] [ACTION] Taking pictures...
+[14:25:59 (1556558759748)] [ACTION] Using Camera 0...
+[14:26:0 (1556558760497)] [ACTION] Camera 0 frame grab
+[14:26:0 (1556558760497)] [ACTION] Using C1...
+[14:26:0 (1556558760497)] [MODERATE] Camera 1 failed to open
+[14:26:0 (1556558760497)] Picture Taking Time: 749ms
+[14:26:0 (1556558760497)] [ACTION] Compressing...
+[14:26:0 (1556558760521)] [ACTION] Camera 0 Success! Saved at Pictures/2019-4-29 (VIS).jpeg
+[14:26:0 (1556558760521)] END OF RUNTIME
+[14:26:0 (1556558760521)] Runtime: 773ms - Error Count: 1
+

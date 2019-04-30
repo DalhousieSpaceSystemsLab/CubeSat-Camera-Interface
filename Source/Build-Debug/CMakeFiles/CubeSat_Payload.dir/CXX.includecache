@@ -7,6 +7,10 @@
 #IncludeRegexTransform: 
 
 /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp
+main.hpp
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.hpp
+
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.hpp
 iostream
 -
 fstream
