@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/S
 CMakeFiles/CubeSat_Payload.dir/all:
 	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/depend
 	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles --progress-num=1,2 "Built target CubeSat_Payload"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles --progress-num=1,2,3 "Built target CubeSat_Payload"
 .PHONY : CMakeFiles/CubeSat_Payload.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/CubeSat_Payload.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CubeSat_Payload.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CubeSat_Payload.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/CubeSat_Payload.dir/rule

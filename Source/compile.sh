@@ -9,11 +9,30 @@ BGREEN='\033[1;32m'
 RESET='\033[0m' # No Color
 cmakeSuccess=0
 compileSuccess=0
+build='Build-Debug'
+source='Source'
+fresh=0
+
+clean() {
+  echo -e "${BYELLOW}Cleaning old files...${RESET}"
+  echo ""
+  echo -e "${YELLOW}Deleting $build/CMakeCache.txt...${RESET}"
+  rm $build/CMakeCache.txt
+  echo -e "${YELLOW}Deleting $build/CubeSat_Payload...${RESET}"
+  rm $build/CubeSat_Payload
+  echo -e "${YELLOW}Deleting $build/Makefile...${RESET}"
+  rm $build/Makefile
+  echo -e "${YELLOW}Deleting $build/cmake_install.cmake...${RESET}"
+  rm $build/cmake_install.cmake
+  echo ""
+  echo -e "${GREEN}[OK]${RESET} All clean!"
+  echo ""
+}
 
 cmakeBuild() {
   echo -e "${BYELLOW}Building new build...${RESET}"
   echo ""
-  cmake -B Build-Debug -S Source
+  cmake -B $build -S $source
   result=$?
   echo ""
   if (( $result != 0 )); then
@@ -29,7 +48,7 @@ cmakeBuild() {
 compile() {
   echo -e "${BYELLOW}Compiling...${RESET}"
   echo ""
-  cmake --build ./Build-Debug
+  cmake --build ./$build
   result=$?
   echo ""
   if (( $result != 0 )); then
@@ -66,8 +85,8 @@ results() {
 }
 
 
-if (( $# > 1 )); then
-  echo -e "${RED}[USAGE]${RESET} compile.sh <mode>"
+if (( $# > 2 )); then
+  echo -e "${RED}[USAGE]${RESET} compile.sh <-b><-f>"
   exit 2
 fi
 
@@ -77,28 +96,27 @@ if (( $# == 0 )); then
     compile
   fi
   results
+else
+  for var in "$@"; do
+    if [ $var == "-f" ]; then
+      fresh=1
+    elif [ $var == '-t' ]; then
+      build='Build-Test'
+      source='Source-Test'
+    else
+      echo -e "${RED}[USAGE]${RESET} compile.sh <-t><-f>"
+      exit 2
+    fi
+  done
 fi
 
-mode=$1;
-if (( mode == "-f" )); then
-  echo -e "${BYELLOW}Cleaning old files...${RESET}"
-  echo ""
-  echo -e "${YELLOW}Deleting Build-Debug/CMakeCache.txt...${RESET}"
-  rm Build-Debug/CMakeCache.txt
-  echo -e "${YELLOW}Deleting Build-Debug/CubeSat_Payload...${RESET}"
-  rm Build-Debug/CubeSat_Payload
-  echo -e "${YELLOW}Deleting Build-Debug/Makefile...${RESET}"
-  rm Build-Debug/Makefile
-  echo -e "${YELLOW}Deleting Build-Debug/cmake_install.cmake...${RESET}"
-  rm Build-Debug/cmake_install.cmake
-  echo ""
-  echo -e "${GREEN}[OK]${RESET} All clean!"
-  echo ""
+if (( $fresh == 1 )); then
+  clean
+fi
 
-  cmakeBuild
-  if (( $cmakeSuccess == 1 )); then
-    compile
-  fi
+cmakeBuild
+if (( $cmakeSuccess == 1 )); then
+  compile
+fi
   results
-
 fi
