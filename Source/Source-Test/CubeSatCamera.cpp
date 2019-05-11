@@ -45,6 +45,8 @@
 //     bool compress ( const Mat &frame, const string &path, const string &name, const string &compression );
 // };
 
+
+
 string CubeSatCamera::getFileName() {
   return param.fileName;
 }
@@ -197,7 +199,7 @@ bool CubeSatCamera::init(string argv[], int argc) {
 
   //gathering commandline args
   string arg;
-  for (int i = 1; i <= argc; i++) { //sadly switch statements cannot be used here without hashing, which has the potential to be inaccurate and is not worth the time loss
+  for (int i = 1; i < argc; i++) { //sadly switch statements cannot be used here without hashing, which has the potential to be inaccurate and is not worth the time loss
     arg = argv[i];
     if (arg == "-q") //no logs
     param.quiet = true;
@@ -278,7 +280,7 @@ bool CubeSatCamera::init(string argv[], int argc) {
   log(NONE, "--------------------------------");
   log(ACTION, "Initializing camera 0...");
   C0.open(0);
-  C0.set(CAP_PROP_EXPOSURE, 0.25);
+  //C0.set(CAP_PROP_EXPOSURE, 0.25);
   if (C0.isOpened())
     log(ACTION, "Initialized");
   else

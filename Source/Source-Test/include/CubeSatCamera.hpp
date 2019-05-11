@@ -17,7 +17,6 @@
 using namespace std;
 using namespace cv;
 
-
 struct params_t {
     string date;
     bool quiet;

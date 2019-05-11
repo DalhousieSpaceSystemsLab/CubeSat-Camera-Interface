@@ -4,15 +4,15 @@
 namespace {
 
 // The fixture for testing class CubeSatTest
-class CubeSatTest : public ::testing::Test {
+class CubeSatBasic : public ::testing::Test {
  protected:
   // You can remove any or all of the following functions if its body
   // is empty.
-  CubeSatTest() {
+  CubeSatBasic() {
      // You can do set-up work for each test here.
   }
 
-  ~CubeSatTest() override {
+  ~CubeSatBasic() override {
      // You can do clean-up work that doesn't throw exceptions here.
 
   }
@@ -33,19 +33,21 @@ class CubeSatTest : public ::testing::Test {
   // Objects declared here can be used by all tests in the test case for Foo.
 };
 
-
-TEST_F(CubeSatTest, BasicTestConstruct) {
+TEST_F(CubeSatBasic, BasicTestConstruct) {
   //printf("HELLO\n");
   string argv[1];
   argv[0] = "CubeSatCamera";
   long startTime = CURRENT_TIME;
   CubeSatCamera camera(argv, 1);
   long runTime = CURRENT_TIME - startTime;
-  EXPECT_LT(runTime, 900);
+  EXPECT_LT(runTime, 800);
 }
 
+
+
+
 // Tests that Foo does Xyz.
-TEST_F(CubeSatTest, DoesNC0) {
+TEST_F(CubeSatBasic, DoesNC0) {
   string argv[] = {"CubeSatCamera", "-nc0"};
   EXPECT_NO_THROW({
     CubeSatCamera camera(argv, 2);
@@ -53,7 +55,7 @@ TEST_F(CubeSatTest, DoesNC0) {
   });
 }
 
-TEST_F(CubeSatTest, DoesNC1) {
+TEST_F(CubeSatBasic, DoesNC1) {
   string argv[] = {"CubeSatCamera", "-nc1"};
   EXPECT_NO_THROW({
     CubeSatCamera camera(argv, 2);
@@ -61,7 +63,7 @@ TEST_F(CubeSatTest, DoesNC1) {
   });
 }
 
-TEST_F(CubeSatTest, DoesCustName) {
+TEST_F(CubeSatBasic, DoesCustName) {
   string argv[] = {"CubeSatCamera", "-n", "test"};
   EXPECT_NO_THROW({
     CubeSatCamera camera(argv, 2);
@@ -69,7 +71,7 @@ TEST_F(CubeSatTest, DoesCustName) {
   });
 }
 
-TEST_F(CubeSatTest, DoesCustFormat) {
+TEST_F(CubeSatBasic, DoesCustFormat) {
   string argv[] = {"CubeSatCamera", "-c", "png"};
   EXPECT_NO_THROW({
     CubeSatCamera camera(argv, 2);
@@ -77,13 +79,27 @@ TEST_F(CubeSatTest, DoesCustFormat) {
   });
 }
 
-TEST_F(CubeSatTest, DoesCustImgQ) {
+TEST_F(CubeSatBasic, DoesCustImgQ) {
   string argv[] = {"CubeSatCamera", "-iq", "50"};
   EXPECT_NO_THROW({
     CubeSatCamera camera(argv, 2);
     camera.grab(0);
   });
 }
+
+TEST_F(CubeSatBasic, Camera0Time) {
+  string argv[1];
+  argv[0] = "CubeSatCamera";
+  CubeSatCamera camera(argv, 1);
+  for (int i = 0; i < 5; i++) {
+    long startTime = CURRENT_TIME;
+    camera.grab(0);
+    long runTime = CURRENT_TIME - startTime;
+    EXPECT_LT(runTime, 90);
+  }
+
+}
+
 //TEST_F(CubeSatTest, DoesQ) {
 
 }  // namespace
