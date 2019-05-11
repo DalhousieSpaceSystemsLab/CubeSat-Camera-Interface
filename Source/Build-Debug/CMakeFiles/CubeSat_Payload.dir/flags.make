@@ -6,5 +6,5 @@ CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/local/include/opencv4 
+CXX_INCLUDES = -I/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/include -isystem /usr/local/include/opencv4 
 

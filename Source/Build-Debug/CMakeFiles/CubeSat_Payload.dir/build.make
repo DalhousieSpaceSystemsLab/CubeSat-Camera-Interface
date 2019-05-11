@@ -57,27 +57,42 @@ include CMakeFiles/CubeSat_Payload.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CubeSat_Payload.dir/flags.make
 
-CMakeFiles/CubeSat_Payload.dir/main.cpp.o: CMakeFiles/CubeSat_Payload.dir/flags.make
-CMakeFiles/CubeSat_Payload.dir/main.cpp.o: /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CubeSat_Payload.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubeSat_Payload.dir/main.cpp.o -c /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp
+CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.o: CMakeFiles/CubeSat_Payload.dir/flags.make
+CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.o: /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/CubeSatCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.o -c /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/CubeSatCamera.cpp
 
-CMakeFiles/CubeSat_Payload.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubeSat_Payload.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp > CMakeFiles/CubeSat_Payload.dir/main.cpp.i
+CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/CubeSatCamera.cpp > CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.i
 
-CMakeFiles/CubeSat_Payload.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubeSat_Payload.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp -o CMakeFiles/CubeSat_Payload.dir/main.cpp.s
+CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/CubeSatCamera.cpp -o CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.s
+
+CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.o: CMakeFiles/CubeSat_Payload.dir/flags.make
+CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.o: /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/BuildTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.o -c /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/BuildTest.cpp
+
+CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/BuildTest.cpp > CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.i
+
+CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/BuildTest.cpp -o CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.s
 
 # Object files for target CubeSat_Payload
 CubeSat_Payload_OBJECTS = \
-"CMakeFiles/CubeSat_Payload.dir/main.cpp.o"
+"CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.o" \
+"CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.o"
 
 # External object files for target CubeSat_Payload
 CubeSat_Payload_EXTERNAL_OBJECTS =
 
-CubeSat_Payload: CMakeFiles/CubeSat_Payload.dir/main.cpp.o
+CubeSat_Payload: CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.o
+CubeSat_Payload: CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.o
 CubeSat_Payload: CMakeFiles/CubeSat_Payload.dir/build.make
 CubeSat_Payload: /usr/local/lib/libopencv_gapi.4.1.0.dylib
 CubeSat_Payload: /usr/local/lib/libopencv_stitching.4.1.0.dylib
@@ -128,7 +143,7 @@ CubeSat_Payload: /usr/local/lib/libopencv_photo.4.1.0.dylib
 CubeSat_Payload: /usr/local/lib/libopencv_imgproc.4.1.0.dylib
 CubeSat_Payload: /usr/local/lib/libopencv_core.4.1.0.dylib
 CubeSat_Payload: CMakeFiles/CubeSat_Payload.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CubeSat_Payload"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Build-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CubeSat_Payload"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CubeSat_Payload.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.cpp
-main.hpp
-/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.hpp
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/BuildTest.cpp
+CubeSatCamera.hpp
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/CubeSatCamera.hpp
 
-/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/main.hpp
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/CubeSatCamera.cpp
+CubeSatCamera.hpp
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/CubeSatCamera.hpp
+
+/Users/liamhebert/Documents/GitHub/CubeSat-Camera-Interface/Source/Source/include/CubeSatCamera.hpp
 iostream
 -
 fstream

@@ -123,32 +123,59 @@ CubeSat_Payload/fast:
 	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/build
 .PHONY : CubeSat_Payload/fast
 
-main.o: main.cpp.o
+BuildTest.o: BuildTest.cpp.o
 
-.PHONY : main.o
+.PHONY : BuildTest.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/main.cpp.o
-.PHONY : main.cpp.o
+BuildTest.cpp.o:
+	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.o
+.PHONY : BuildTest.cpp.o
 
-main.i: main.cpp.i
+BuildTest.i: BuildTest.cpp.i
 
-.PHONY : main.i
+.PHONY : BuildTest.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/main.cpp.i
-.PHONY : main.cpp.i
+BuildTest.cpp.i:
+	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.i
+.PHONY : BuildTest.cpp.i
 
-main.s: main.cpp.s
+BuildTest.s: BuildTest.cpp.s
 
-.PHONY : main.s
+.PHONY : BuildTest.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/main.cpp.s
-.PHONY : main.cpp.s
+BuildTest.cpp.s:
+	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/BuildTest.cpp.s
+.PHONY : BuildTest.cpp.s
+
+CubeSatCamera.o: CubeSatCamera.cpp.o
+
+.PHONY : CubeSatCamera.o
+
+# target to build an object file
+CubeSatCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.o
+.PHONY : CubeSatCamera.cpp.o
+
+CubeSatCamera.i: CubeSatCamera.cpp.i
+
+.PHONY : CubeSatCamera.i
+
+# target to preprocess a source file
+CubeSatCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.i
+.PHONY : CubeSatCamera.cpp.i
+
+CubeSatCamera.s: CubeSatCamera.cpp.s
+
+.PHONY : CubeSatCamera.s
+
+# target to generate assembly for a file
+CubeSatCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/CubeSat_Payload.dir/build.make CMakeFiles/CubeSat_Payload.dir/CubeSatCamera.cpp.s
+.PHONY : CubeSatCamera.cpp.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CubeSat_Payload"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... BuildTest.o"
+	@echo "... BuildTest.i"
+	@echo "... BuildTest.s"
+	@echo "... CubeSatCamera.o"
+	@echo "... CubeSatCamera.i"
+	@echo "... CubeSatCamera.s"
 .PHONY : help
 
 
