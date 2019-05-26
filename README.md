@@ -9,7 +9,7 @@ This software will function as the interface between the camera modules (Color a
 - Ease of modification by operating system to account for potential changes in physical environment, such as disk space and camera damage.
 
 ### Language: 
-- C++
+- C++ 11
 
 ### Target Operating System:
 - Ubuntu Server 18.01
