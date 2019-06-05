@@ -6,10 +6,10 @@ int main(int argc, char const *argv[]) {
   long camera1Time;
   long startTime = CURRENT_TIME;
   string settings[argc] = {""};
-  
-  for (int i = 0; i < argc; i++) {
-    settings[i] = argv[i];
-  }
+
+  //for (int i = 0; i < argc; i++) {
+    //settings[i] = argv[i];
+  //}
 
   CubeSatCamera camera(settings, argc);
   initTime = CURRENT_TIME - startTime;
