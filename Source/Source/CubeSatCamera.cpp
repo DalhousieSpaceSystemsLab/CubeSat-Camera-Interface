@@ -277,41 +277,7 @@ bool CubeSatCamera::init(string argv[], int argc) {
   //initializing cameras here
   log(NONE, "--------------------------------");
   log(ACTION, "Initializing camera 0...");
-  C0.open(0);
-//  float Brightness = C0.get(CAP_PROP_BRIGHTNESS);
-//  float Contrast   = C0.get(CAP_PROP_CONTRAST );
-//  float Saturation = C0.get(CAP_PROP_SATURATION);
-//  float Gain       = C0.get(CAP_PROP_GAIN);
-//
-//  float Position = C0.get(CAP_PROP_POS_MSEC);
-//  float Width = C0.get(CAP_PROP_FRAME_WIDTH);
-//  float Height = C0.get(CAP_PROP_FRAME_HEIGHT);
-//  float Format = C0.get(CAP_PROP_FORMAT);
-
-//  double Hue = C0.get(CAP_PROP_HUE);
-//  double Exposure = C0.get(CAP_PROP_EXPOSURE);
-//  double Mode = C0.get(CAP_PROP_MODE);
-//  double fps = C0.get(CAP_PROP_FPS);
-//
-//  C0.set(CAP_PROP_SATURATION, -7);
-//  cout<<"Brightness -------> "<<Brightness<<endl;
-//  cout<<"Contrast----------> "<<Contrast<<endl;
-//  cout<<"Saturation--------> "<<Saturation<<endl;
-//  cout<<"Gain--------------> "<<Gain<<endl;
-//  cout<<"Hue---------------> "<<Hue<<endl;
-//  cout<<"Exposure----------> "<<Exposure<<endl;
-//  cout<<"Mode--------------> "<<Mode<<endl;
-//
-//  cout<<"Position---------->"<<Position<<endl;
-//  cout<<"Width------------->"<<Width<<endl;
-//  cout<<"Height------------>"<<Height<<endl;
-//  cout<<"Format------------>"<<Format<<endl;
-//  cout<<"Frames---------->"<<fps<<endl<<endl;
-
-
-
-
-
+  C0.open(0, CAP_V4L2);
 
 
   if (C0.isOpened())
