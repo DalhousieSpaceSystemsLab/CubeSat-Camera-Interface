@@ -284,13 +284,12 @@ bool CubeSatCamera::init(string argv[], int argc) {
     log(ACTION, "Initialized");
   else
     log(SEVERE, "Camera 0 failed to initialize");
+    
+  log(ACTION, "Initializing camera 1...");
+  C1.open(1);
+  if (C1.isOpened())
+    log(ACTION, "Initialized");
+  else
+    log(SEVERE, "Camera 1 failed to initialize");
   return 0;
 }
-  // log(ACTION, "Initializing camera 1...");
-  // C1.open(1);
-  // if (C1.isOpened())
-  //   log(ACTION, "Initialized");
-  // else
-  //   log(SEVERE, "Camera 1 failed to initialize");
-  // return 0;
-//}
