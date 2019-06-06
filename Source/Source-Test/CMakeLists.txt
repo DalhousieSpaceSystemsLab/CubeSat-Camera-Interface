@@ -39,7 +39,7 @@ add_definitions("-DBUILD_SHARED_LIBS=1")
 enable_testing()
 
 include_directories( include )
-add_executable( CubeSat_Payload CubeSatCamera.cpp BuildTest.cpp )
+add_executable( CubeSat_Payload ../Source/CubeSatCamera.cpp BuildTest.cpp )
 target_link_libraries( CubeSat_Payload ${OpenCV_LIBS} )
 target_link_libraries( CubeSat_Payload gtest_main )
 

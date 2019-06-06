@@ -5,7 +5,7 @@ int main(int argc, char const *argv[]) {
   long camera0Time;
   long camera1Time;
   long startTime = CURRENT_TIME;
-  string settings[argc] = {""};
+  string settings[argc];
 
   //for (int i = 0; i < argc; i++) {
     //settings[i] = argv[i];

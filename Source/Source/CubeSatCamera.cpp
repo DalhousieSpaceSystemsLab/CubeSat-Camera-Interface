@@ -177,7 +177,6 @@ bool CubeSatCamera::release() {
 
 bool CubeSatCamera::init(string argv[], int argc) {
   errorCount = 0;
-  //printf("SURVIVED\n");
   int dirResult = mkdir("Error Logs", S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH); //creating dir w/ rwx-rx-rx
   if (dirResult != -1) { //-1 means folder already exists
     cout << "Creating new Error Logs Folder..." << endl;
@@ -195,9 +194,10 @@ bool CubeSatCamera::init(string argv[], int argc) {
   param.compression = "jpeg";
   param.quality = 95;
 
+  //TODO - Refactor this badboy into the grab commands. No reason for this to be here anymore.
   //gathering commandline args
   string arg;
-  for (int i = 1; i <= argc; i++) { //sadly switch statements cannot be used here without hashing, which has the potential to be inaccurate and is not worth the time loss
+  for (int i = 1; i < argc; i++) { //sadly switch statements cannot be used here without hashing, which has the potential to be inaccurate and is not worth the time loss
     arg = argv[i];
     if (arg == "-q") //no logs
     param.quiet = true;
@@ -277,7 +277,7 @@ bool CubeSatCamera::init(string argv[], int argc) {
   //initializing cameras here
   log(NONE, "--------------------------------");
   log(ACTION, "Initializing camera 0...");
-  C0.open(0, CAP_V4L2);
+  C0.open(0);
 
 
   if (C0.isOpened())
