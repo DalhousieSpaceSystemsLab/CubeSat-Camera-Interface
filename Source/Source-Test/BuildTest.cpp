@@ -34,66 +34,67 @@ class CubeSatBasic : public ::testing::Test {
 };
 
 TEST_F(CubeSatBasic, BasicTestConstruct) {
-  //printf("HELLO\n");
-  string argv[1];
-  argv[0] = "CubeSatCamera";
   long startTime = CURRENT_TIME;
-  CubeSatCamera camera(argv, 1);
+  CubeSatCamera camera;
   long runTime = CURRENT_TIME - startTime;
   EXPECT_LT(runTime, 800);
 }
 
-
-
-
-// Tests that Foo does Xyz.
 TEST_F(CubeSatBasic, DoesNC0) {
-  string argv[] = {"CubeSatCamera", "-nc0"};
+  vector<string> vect;
+  vect.push_back("-nc0");
   EXPECT_NO_THROW({
-    CubeSatCamera camera(argv, 2);
-    camera.grab(0);
+    CubeSatCamera camera;
+    camera.grab(0, camera.parseParams(vect));
   });
 }
 
 TEST_F(CubeSatBasic, DoesNC1) {
-  string argv[] = {"CubeSatCamera", "-nc1"};
+  vector<string> vect;
+  vect.push_back("-nc1");
   EXPECT_NO_THROW({
-    CubeSatCamera camera(argv, 2);
-    camera.grab(0);
+    CubeSatCamera camera;
+    camera.grab(0, camera.parseParams(vect));
   });
 }
 
 TEST_F(CubeSatBasic, DoesCustName) {
-  string argv[] = {"CubeSatCamera", "-n", "test"};
+  vector<string> vect; 
+  vect.push_back("-n");
+  vect.push_back("test");
+
   EXPECT_NO_THROW({
-    CubeSatCamera camera(argv, 2);
-    camera.grab(0);
+    CubeSatCamera camera;
+    camera.grab(0, camera.parseParams(vect));
   });
 }
 
 TEST_F(CubeSatBasic, DoesCustFormat) {
-  string argv[] = {"CubeSatCamera", "-c", "png"};
+  vector<string> vect;
+  vect.push_back("-c");
+  vect.push_back("png");
   EXPECT_NO_THROW({
-    CubeSatCamera camera(argv, 2);
-    camera.grab(0);
+    CubeSatCamera camera;
+    camera.grab(0, camera.parseParams(vect));
   });
 }
 
 TEST_F(CubeSatBasic, DoesCustImgQ) {
-  string argv[] = {"CubeSatCamera", "-iq", "50"};
+  vector<string> vect; 
+  vect.push_back("-iq");
+  vect.push_back("50");
   EXPECT_NO_THROW({
-    CubeSatCamera camera(argv, 2);
-    camera.grab(0);
+    CubeSatCamera camera;
+    camera.grab(0, camera.parseParams(vect));
   });
 }
 
 TEST_F(CubeSatBasic, Camera0Time) {
-  string argv[1];
-  argv[0] = "CubeSatCamera";
-  CubeSatCamera camera(argv, 1);
+  vector<string> vect;
+  CubeSatCamera camera;
   for (int i = 0; i < 5; i++) {
     long startTime = CURRENT_TIME;
-    camera.grab(0);
+    camera.grab(0, camera.parseParams(vect));
     long runTime = CURRENT_TIME - startTime;
     EXPECT_LT(runTime, 90);
   }

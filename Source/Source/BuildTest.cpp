@@ -5,27 +5,27 @@ int main(int argc, char const *argv[]) {
   long camera0Time;
   long camera1Time;
   long startTime = CURRENT_TIME;
-  string settings[argc];
+  vector<std::string> settings;
+  for (int i = 0; i < argc; i++) {
+    settings.push_back(argv[i]);
+  }
 
-  //for (int i = 0; i < argc; i++) {
-    //settings[i] = argv[i];
-  //}
 
-  CubeSatCamera camera(settings, argc);
+  CubeSatCamera camera;
   initTime = CURRENT_TIME - startTime;
 
   printf("enter any key to take a picture with camera 0: \n");
   getchar();
 
   startTime = CURRENT_TIME;
-  camera.grab(0);
+  camera.grab(0, camera.parseParams(settings));
   camera0Time = CURRENT_TIME - startTime;
 
   printf("enter any key to take a picture with camera 1: \n");
   getchar();
 
   startTime = CURRENT_TIME;
-  camera.grab(1);
+  camera.grab(1, camera.parseParams(settings));
   camera1Time = CURRENT_TIME - startTime;
 
   camera.log(NONE, "--------------------------------");
@@ -35,9 +35,8 @@ int main(int argc, char const *argv[]) {
   camera.log(SYSTEM, "Camera1 Runtime: " + to_string(camera1Time) + "ms");
   camera.log(NONE, "--------------------------------");
   camera.log(NONE, "");
-  string fileName = camera.getFileName();
 
-  string pictureSize = "du -h Pictures/" + fileName + "*";
+  string pictureSize = "du -h Pictures/*";
   string initTimeCmd = "echo 'Initialize Runtime: " + to_string(initTime) + "ms'";
   string cam0Cmd = "echo 'Camera0 Runtime: " + to_string(camera0Time) + "ms'";
   string cam1Cmd = "echo 'Camera1 Runtime: " + to_string(camera1Time) + "ms'";
