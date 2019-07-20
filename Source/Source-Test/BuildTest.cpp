@@ -29,7 +29,7 @@ class CubeSatBasic : public ::testing::Test {
      // Code here will be called immediately after each test (right
      // before the destructor).
   }
-
+  CubeSatCamera camera;
   // Objects declared here can be used by all tests in the test case for Foo.
 };
 
@@ -44,7 +44,6 @@ TEST_F(CubeSatBasic, DoesNC0) {
   vector<string> vect;
   vect.push_back("-nc0");
   EXPECT_NO_THROW({
-    CubeSatCamera camera;
     camera.grab(0, camera.parseParams(vect));
   });
 }
@@ -53,7 +52,6 @@ TEST_F(CubeSatBasic, DoesNC1) {
   vector<string> vect;
   vect.push_back("-nc1");
   EXPECT_NO_THROW({
-    CubeSatCamera camera;
     camera.grab(0, camera.parseParams(vect));
   });
 }
@@ -64,7 +62,6 @@ TEST_F(CubeSatBasic, DoesCustName) {
   vect.push_back("test");
 
   EXPECT_NO_THROW({
-    CubeSatCamera camera;
     camera.grab(0, camera.parseParams(vect));
   });
 }
@@ -74,7 +71,6 @@ TEST_F(CubeSatBasic, DoesCustFormat) {
   vect.push_back("-c");
   vect.push_back("png");
   EXPECT_NO_THROW({
-    CubeSatCamera camera;
     camera.grab(0, camera.parseParams(vect));
   });
 }
@@ -84,14 +80,12 @@ TEST_F(CubeSatBasic, DoesCustImgQ) {
   vect.push_back("-iq");
   vect.push_back("50");
   EXPECT_NO_THROW({
-    CubeSatCamera camera;
     camera.grab(0, camera.parseParams(vect));
   });
 }
 
 TEST_F(CubeSatBasic, Camera0Time) {
   vector<string> vect;
-  CubeSatCamera camera;
   for (int i = 0; i < 5; i++) {
     long startTime = CURRENT_TIME;
     camera.grab(0, camera.parseParams(vect));

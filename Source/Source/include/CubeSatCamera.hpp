@@ -1,7 +1,10 @@
+#ifndef LORIS_CAMERA
+#define LORIS_CAMERA
 #include <iostream> //printing to console (cerr)
 #include <fstream> //creating a log file
 #include <sys/stat.h> //mkdir
 #include <ctime> //localtime
+#include "CameraDataTypes.hpp"
 
 #include <opencv2/core.hpp> //core dependancies of opencv
 #include <opencv2/videoio.hpp> //VideoCapture
@@ -35,21 +38,13 @@ using namespace std;
 using namespace cv;
 
 
-struct cameraParams_t {
-    string date;
-    string filePath;
-    string fileName;
-    string compression;
-    int quality;
-};
-
-
 class CubeSatCamera {
 public:
     bool init();
     bool grab(int camera, const std::string &filePath, const std::string &fileName, const std::string &compression, int quality);
-    bool grab(int camera, cameraParams_t param);
+    bool grab(cameraParams_t param);
     bool release();
+    bool isReady();
     void log ( const int level, const string &msg );
     cameraParams_t parseParams(vector<std::string> argv);
     string getFileName();
@@ -62,6 +57,8 @@ public:
 private:
     int errorCount;
     ofstream printer;
+    bool c0Open = true;
+    bool c1Open = true;
 
     VideoCapture C0;
     VideoCapture C1;
@@ -70,3 +67,4 @@ private:
     Mat capture( VideoCapture *cap );
     bool compress ( const Mat &frame, const std::string &path, const std::string &name, const std::string &compression, const int quality);
 };
+#endif

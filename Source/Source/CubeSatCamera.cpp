@@ -55,6 +55,10 @@ string CubeSatCamera::getDate() {
   return year + "-" + month + "-" + day;
 }
 
+bool isReady() {
+  return c1Open || c2Open;
+}
+
 cameraParams_t CubeSatCamera::parseParams(vector<std::string> argv) {
   //gathering commandline args
   string arg;
@@ -121,7 +125,7 @@ cameraParams_t CubeSatCamera::parseParams(vector<std::string> argv) {
         }
         else {
           arg = argv.at(i);
-          cerr << "invalid compression format" << endl;
+          cerr << "invalid quality format" << endl;
         }
       } else cerr << "missing compression string" << endl;
     }
@@ -150,20 +154,21 @@ bool CubeSatCamera::compress(const Mat &frame, const std::string &path, const st
   if (compression == "jpeg") {
     compression_params.push_back(IMWRITE_JPEG_QUALITY);
     compression_params.push_back(quality);
-    printf("JPEG");
   }
   else if (compression == "png") {
     compression_params.push_back(IMWRITE_PNG_COMPRESSION);
     compression_params.push_back(quality);
-    printf("PNG");
   }
-  printf("%lu", compression_params.size());
-  printf("\n%s", compression.c_str());
   return imwrite(path + name + ".jpeg", frame);
 }
 
-bool CubeSatCamera::grab(int camera, cameraParams_t param) {
-  return grab(camera, param.filePath, param.fileName, param.compression, param.quality);
+bool CubeSatCamera::grab(cameraParams_t param) {
+  bool result = true;
+  if (c0Open == true) 
+    result = result && grab(0, param.filePath, param.fileName, param.compression, param.quality);
+  if (c1Open == true)
+    result = result && grab(1, param.filePath, param.fileName, param.compression, param.quality); 
+  return result;
 }
 
 bool CubeSatCamera::grab(int camera, const std::string &filePath, const std::string &fileName, const std::string &compression, int quality) {
@@ -267,7 +272,10 @@ void CubeSatCamera::log(const int level, const string &msg) {
 bool CubeSatCamera::release() {
   C0.release();
   C1.release();
+  c0Open = false;
+  c1Open = false;
   printer.close();
+  
   return true;
 }
 
@@ -284,20 +292,25 @@ bool CubeSatCamera::init() {
   printer.open("Error Logs/" + getDate() + ".log", ios_base::app); //opening file or creating new one if does not exist
   log(NONE, "START OF RUNTIME"); //I know what you are thinking, I lied here. shhhh
 
+  int results = 0;
   //initializing cameras here
   log(NONE, "--------------------------------");
   log(ACTION, "Initializing camera 0...");
   C0.open(0);
   if (C0.isOpened())
     log(ACTION, "Initialized");
-  else
+  else {
+    c0Open = false;
     log(SEVERE, "Camera 0 failed to initialize");
+  }
     
   log(ACTION, "Initializing camera 1...");
   C1.open(1);
   if (C1.isOpened())
     log(ACTION, "Initialized");
-  else
+  else {
+    c1Open = false;
     log(SEVERE, "Camera 1 failed to initialize");
-  return 0;
+  }
+  return c0Open || c1Open;
 }
