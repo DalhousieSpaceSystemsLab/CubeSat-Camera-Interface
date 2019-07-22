@@ -1,3 +1,7 @@
 {
-    "C_Cpp.configurationWarnings": "Disabled"
+    "C_Cpp.configurationWarnings": "Disabled",
+    "files.associations": {
+        "iostream": "cpp",
+        "iosfwd": "cpp"
+    }
 }

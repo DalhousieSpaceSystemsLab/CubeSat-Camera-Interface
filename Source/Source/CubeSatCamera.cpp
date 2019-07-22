@@ -8,43 +8,6 @@
 
 #include "CubeSatCamera.hpp"
 
-// struct parameters_t {
-//     string date;
-//     bool quiet;
-//     string filePath;
-//     string fileName;
-//     string compression;
-//     int quality;
-// };
-
-// class CubeSatCamera {
-// public:
-//     bool init( int argv.size(), const char * argv[] );
-//     bool grab( int camera );
-//     bool release();
-//     void log ( const int level, const string &msg );
-//
-//     string getFileName();
-//     CubeSatCamera( int argv.size(), const char * argv[] ) {
-//         init(argv.size(), argv);
-//     }
-//     ~CubeSatCamera() {
-//         release();
-//     }
-// private:
-//     int errorCount;
-//     ofstream printer;
-//
-//     VideoCapture C0;
-//     VideoCapture C1;
-//
-//     parameters_t * param;
-//     string getDate();
-//     string getTime();
-//     Mat capture( VideoCapture *cap );
-//     bool compress ( const Mat &frame, const string &path, const string &name, const string &compression );
-// };
-
 //gets today's date in YYYY-MM-DD format
 string CubeSatCamera::getDate() {
   time_t now = time(nullptr);
@@ -55,8 +18,8 @@ string CubeSatCamera::getDate() {
   return year + "-" + month + "-" + day;
 }
 
-bool isReady() {
-  return c1Open || c2Open;
+bool CubeSatCamera::isReady() {
+  return c0Open || c1Open;
 }
 
 cameraParams_t CubeSatCamera::parseParams(vector<std::string> argv) {
@@ -159,29 +122,41 @@ bool CubeSatCamera::compress(const Mat &frame, const std::string &path, const st
     compression_params.push_back(IMWRITE_PNG_COMPRESSION);
     compression_params.push_back(quality);
   }
-  return imwrite(path + name + ".jpeg", frame);
+  return imwrite(path + name + "." + compression, frame);
 }
 
 bool CubeSatCamera::grab(cameraParams_t param) {
-  bool result = true;
-  if (c0Open == true) 
-    result = result && grab(0, param.filePath, param.fileName, param.compression, param.quality);
-  if (c1Open == true)
-    result = result && grab(1, param.filePath, param.fileName, param.compression, param.quality); 
+  bool result = false;
+  spdlog::info("VALUE OF c0Open {} c1Open {}", c0Open, c1Open);
+  //if either is successful, return true;
+  if (c0Open == true) {
+    bool temp = grab(0, param.filePath, param.fileName, param.compression, param.quality);
+    spdlog::info(temp);
+    result = result || temp;
+  }
+  if (c1Open == true) {
+    bool temp = grab(0, param.filePath, param.fileName, param.compression, param.quality);
+    spdlog::info(temp);
+    result = result || temp;
+  }
+
+  spdlog::info("VALUE OF RESULT {}" , result);
   return result;
 }
 
 bool CubeSatCamera::grab(int camera, const std::string &filePath, const std::string &fileName, const std::string &compression, int quality) {
   //talk about settings used
-  log(NONE, "--------------------------------");
-  log(ACTION, "SETTINGS");
-  log(NONE, "Date: " + getDate());
-  log(NONE, "File Path: " + filePath);
-  log(NONE, "File Name: " + fileName);
-  log(NONE, "Compression: " + compression);
-  log(NONE, "Quality Setting: " + to_string(quality));
-  log(NONE, "--------------------------------");
-  log(NONE, "");
+  stringstream stream;
+  stream << endl << "--------------------------------" << endl;
+  stream << "SETTINGS" << endl;
+  stream << "Date: " << getDate() << endl;
+  stream << "File Path: " << filePath << endl;
+  stream << "File Name: " << fileName << endl;
+  stream << "Compression: " + compression << endl;
+  stream << "Quality Setting: " + to_string(quality) << endl;
+  stream << "--------------------------------" << endl;
+  logger -> info(stream.str());
+  stream.clear();
 
   long startTime = CURRENT_TIME;
   VideoCapture * cam;
@@ -192,125 +167,78 @@ bool CubeSatCamera::grab(int camera, const std::string &filePath, const std::str
     cam = &C1;
   else {
     picture.release();
-    log(MODERATE, "Invalid camera selection");
+    logger -> warn("Invalid camera selection");
     return false;
   }
-  log(NONE, "--------------------------------");
-  log(ACTION, "Using Camera " + to_string(camera) + "...");
+  logger -> info("Using Camera " + to_string(camera) + "...");
   if (cam -> isOpened()) {
     picture = capture(cam);
     if (!picture.empty()) {
-      log(ACTION, "Frame grabbed successfully");
+      logger -> info("Frame grabbed successfully");
       if(compress(picture, filePath, fileName + " (C" + to_string(camera) + ")", compression, quality)){
-        log(ACTION, "Compressed successfully! Saved at " + filePath + fileName + " (C" + to_string(camera) + ")" + "." + compression);
+        logger -> info("Compressed successfully! Saved at " + filePath + fileName + " (C" + to_string(camera) + ")" + "." + compression);
         picture.release();
-        log(ACTION, "Runtime: " + to_string(CURRENT_TIME - startTime));
-        log(NONE, "--------------------------------");
-        log(NONE, "");
+        logger -> info("Runtime: " + to_string(CURRENT_TIME - startTime));
         return true;
       }
       else { //compression failed
-        log(SEVERE, "Picture failed to compress");
+        logger -> critical("Picture failed to compress");
         picture.release();
       }
     }
     else { //frame grab failed
-      log(SEVERE, "Camera failed to grab frame");
+      logger -> critical("Camera failed to grab frame");
       picture.release();
     }
   }
   else { //camera not properly initialized
-    log(MODERATE, "Camera not properly initialized");
+    logger -> warn("Camera not properly initialized");
     picture.release();
   }
-  log(ACTION, "Runtime: " + to_string(CURRENT_TIME - startTime));
-  log(NONE, "--------------------------------");
-  log(NONE, "");
+  logger -> info("Runtime: " + to_string(CURRENT_TIME - startTime));
   return false;
-}
-
-//logs errors and actions into Error Logs/(date).txt
-void CubeSatCamera::log(const int level, const string &msg) {
-  if (!printer.is_open()) {
-    cerr << "[" << getTime() << "] " << "ErrorLog Failed to open, no errors today!" << endl;
-  }
-  else {
-   if (level == -1) { //new line
-      printer << endl;
-      return;
-    }
-
-    printer << "[" << getTime() << "] ";
-    switch (level) { //error tags
-      case (SEVERE) :
-        printer << "[SEVERE] "; //program breaking errors
-        errorCount++;
-        break;
-      case (MODERATE) :
-        printer << "[MODERATE] "; //things to look into
-        errorCount++;
-        break;
-      case (ACTION) :
-        printer << "[ACTION] "; //logging important actions
-        break;
-      case (SYSTEM) :
-        printer << "[SYSTEM] "; //logging external input
-        break;
-      case (NONE) : //no tag
-        break;
-      default :
-        printer << "[LEVEL " << level << "] "; //custom level errors
-        errorCount++;
-        break;
-      }
-      printer << msg << endl;
-    }
-    printer.flush(); //prints message to file
 }
 
 
 bool CubeSatCamera::release() {
+  logger -> info("RELEASING CAMERAS");
   C0.release();
   C1.release();
   c0Open = false;
   c1Open = false;
-  printer.close();
-  
+  logger -> flush();
   return true;
 }
 
-bool CubeSatCamera::init() {
-  int dirResult = mkdir("Error Logs", S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH); //creating dir w/ rwx-rx-rx
-  if (dirResult != -1) { //-1 means folder already exists
-    cout << "Creating new Error Logs Folder..." << endl;
-  }
-  dirResult = mkdir("Pictures", S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH); //creating dir w/ rwx-rx-rx
-  if (dirResult != -1) {
-    cout << "Creating new Pictures Folder..." << endl;
-  }
+void CubeSatCamera::flush() {
+  logger -> flush();
+}
 
-  printer.open("Error Logs/" + getDate() + ".log", ios_base::app); //opening file or creating new one if does not exist
-  log(NONE, "START OF RUNTIME"); //I know what you are thinking, I lied here. shhhh
+bool CubeSatCamera::init() {
+  logger -> info("INITIALIZING CAMERAS");
 
   int results = 0;
   //initializing cameras here
-  log(NONE, "--------------------------------");
-  log(ACTION, "Initializing camera 0...");
+  logger -> info("Initializing camera 0...");
   C0.open(0);
-  if (C0.isOpened())
-    log(ACTION, "Initialized");
+  if (C0.isOpened()) {
+    c0Open = true;
+    logger -> info("Initialized");
+  }
   else {
     c0Open = false;
-    log(SEVERE, "Camera 0 failed to initialize");
+    logger -> critical("Camera 0 failed to initialize");
   }
     
-  log(ACTION, "Initializing camera 1...");
+  logger -> info("Initializing camera 1...");
   C1.open(1);
-  if (C1.isOpened())
-    log(ACTION, "Initialized");
+  if (C1.isOpened()) {
+    c1Open = true;
+    logger -> info("Initialized");
+  }
   else {
     c1Open = false;
-    log(SEVERE, "Camera 1 failed to initialize");
+    logger -> critical("Camera 1 failed to initialize");
   }
   return c0Open || c1Open;
 }

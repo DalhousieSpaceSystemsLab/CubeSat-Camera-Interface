@@ -34,3 +34,12 @@
 # Extra files
 *.xml
 *.cmake
+*.DS_Store
+
+# folders
+Source/source/build/*
+Source/build/*
+Source/.vscode/*
+Source/.DS_Store
+Source/Build-Debug/*
+Source/Build-Test/
