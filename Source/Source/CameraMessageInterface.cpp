@@ -35,7 +35,7 @@ bool sendStatus(int data) {
 		<< "CONTENTS:" << endl
         << INDENT_SPACES << "STATUS: " << message.GetInt(0) << endl;
     cout << endl << "== END CONTENTS ==" << endl << endl; 
-    
+    cout << "PROCESSING TIME: " << CURRENT_TIME - processingTime << "ms" << endl;
     return true;
 }
 
@@ -153,7 +153,7 @@ bool takePicture(cameraParams_t * param) {
     }
 
     spdlog::info("Taking picture");
-    if (camera.grab(*param)) {
+    if (camera.grab(param)) {
         spdlog::info("Picture taken!");
         return true;
     }
@@ -235,6 +235,7 @@ int main(int argc, char const *argv[]) {
         spdlog::info("Checking for messages...");
         Message message = getMessage();
         if (message.GetMessageContents().GetAmountofIntPairs() != 0) {
+            processingTime = CURRENT_TIME;
             spdlog::info("MESSAGE RECEIVED");
             spdlog::info("RECEIVED STATUS: {}", message.GetInt(0));
             if (message.GetInt(0) == incoming_data.initialize) 

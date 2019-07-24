@@ -1,5 +1,6 @@
 #ifndef LORIS_CAMERA
 #define LORIS_CAMERA
+
 #include <iostream> //printing to console (cerr)
 #include <sys/stat.h> //mkdir
 #include <ctime> //localtime
@@ -11,35 +12,24 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/daily_file_sink.h>
 
-#ifndef CURRENT_TIME
-#define CURRENT_TIME chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count()
-#endif
+#include "CameraParameters.hpp"
 
 using namespace std;
 using namespace cv;
 
-struct cameraParams_t {
-    std::string date;
-    std::string filePath;
-    std::string fileName;
-    std::string compression;
-    int quality;
-};
-
 class CubeSatCamera {
 public:
     bool init();
-    bool grab(int camera, const std::string &filePath, const std::string &fileName, const std::string &compression, int quality);
-    bool grab(cameraParams_t param);
+    bool grab(cameraParams_t * param);
     bool release();
     bool isReady();
     void flush();
-    cameraParams_t parseParams(vector<std::string> argv);
+    void parseParams(vector<std::string> argv, cameraParams_t * param);
     string getFileName();
     CubeSatCamera() {
         try {
             logger = spdlog::daily_logger_mt("CubeSatCamera", "Error Logs/camera", 0, 0);
-        } catch(spdlog::spdlog_ex) {
+        } catch(spdlog::spdlog_ex) { //logger already exists
             logger = spdlog::get("CubeSatCamera");
         };
         spdlog::flush_every(chrono::seconds(5));
@@ -53,11 +43,18 @@ private:
     bool c0Open = false;
     bool c1Open = false;
     std::shared_ptr<spdlog::logger> logger;
-    VideoCapture C0;
-    VideoCapture C1;
+    VideoCapture C0 = NULL;
+    VideoCapture C1 = NULL;
+    VideoCapture * _C0 = &C0;
+    VideoCapture * _C1 = &C1;
     string getDate();
     string getTime();
     Mat capture( VideoCapture *cap );
-    bool compress ( const Mat &frame, const std::string &path, const std::string &name, const std::string &compression, const int quality);
+    bool grab(int camera, cameraParams_t * param);
+    bool compress ( const Mat &frame, const cameraParams_t * param, string camera);
 };
+#endif
+
+#ifndef CURRENT_TIME
+#define CURRENT_TIME chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now().time_since_epoch()).count()
 #endif

@@ -1,8 +1,6 @@
 #ifndef LORIS_CAMERA_MESSAGE_INTERFACE
 #define LORIS_CAMERA_MESSAGE_INTERFACE
 
-
-
 #include "CubeSatCamera.hpp"
 #include "BuildTest.hpp"
 #include "CameraDataTypes.hpp"
@@ -23,6 +21,7 @@ int main(int argc, char const *argv[]);
 string getDate();
 std::shared_ptr<spdlog::logger> logger;
 CubeSatCamera camera;
+long processingTime;
 
 
 #endif 

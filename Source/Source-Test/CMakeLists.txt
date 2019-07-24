@@ -1,6 +1,7 @@
 cmake_minimum_required( VERSION 3.9.1 )
 set ( CMAKE_CXX_STANDARD 11 )
 find_package( OpenCV REQUIRED core videoio imgcodecs )
+find_package( spdlog REQUIRED )
 
 # Download and unpack googletest at configure time
     configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -41,7 +42,10 @@ enable_testing()
 include_directories( include ../Source/include)
 add_executable( CubeSat_Payload ../Source/CubeSatCamera.cpp BuildTest.cpp )
 target_link_libraries( CubeSat_Payload ${OpenCV_LIBS} )
+target_Link_libraries( CubeSat_Payload spdlog::spdlog)
 target_link_libraries( CubeSat_Payload gtest_main )
+file (MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/Error Logs")
+file (MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/Pictures")
 
 add_test(CubeSat_Payload
          CubeSat_Payload)

@@ -5,21 +5,23 @@ int demo(int argc, char const *argv[]) {
   
   long initTime;
   long cameraTime;
-  long startTime = CURRENT_TIME;
   vector<std::string> settings;
   for (int i = 0; i < argc; i++) {
     settings.push_back(argv[i]);
   }
-
   CubeSatCamera camera;
+
+  long startTime = CURRENT_TIME;
   camera.init();
   initTime = CURRENT_TIME - startTime;
 
-  printf("enter any key to take a picture \n");
+  cameraParams_t params;
+  camera.parseParams(settings, &params);
+  
+  cout << "enter any key to take a picture " << endl;
   getchar();
-
   startTime = CURRENT_TIME;
-  camera.grab(camera.parseParams(settings));
+  camera.grab(&params);
   cameraTime = CURRENT_TIME - startTime;
 
   spdlog::info("Runtimes: ");
