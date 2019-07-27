@@ -22,8 +22,6 @@ This software will function as the interface between the camera modules (Color a
   - Used to compile OpenCV with the main script
 - [GoogleTest](https://github.com/google/googletest)
   - Automatically downloaded via CMakeLists, this is what we use to test the functionality of the program.
-- [Docker](https://www.docker.com/) *(optional)*
-  - Docker repo with OpenCV can be found at liamhebert/cubesat-payload
 - *Dependencies may increase as development progresses*
 
 ### Command Line Args:
