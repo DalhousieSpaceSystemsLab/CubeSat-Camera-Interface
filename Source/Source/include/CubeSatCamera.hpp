@@ -27,6 +27,8 @@ public:
     void parseParams(vector<std::string> argv, cameraParams_t * param);
     string getFileName();
     CubeSatCamera() {
+        C0.release();
+        C1.release();
         try {
             logger = spdlog::daily_logger_mt("CubeSatCamera", "Error Logs/camera", 0, 0);
         } catch(spdlog::spdlog_ex) { //logger already exists
@@ -40,13 +42,9 @@ public:
     }
 private:
     int errorCount;
-    bool c0Open = false;
-    bool c1Open = false;
     std::shared_ptr<spdlog::logger> logger;
     VideoCapture C0 = NULL;
     VideoCapture C1 = NULL;
-    VideoCapture * _C0 = &C0;
-    VideoCapture * _C1 = &C1;
     string getDate();
     string getTime();
     Mat capture( VideoCapture *cap );

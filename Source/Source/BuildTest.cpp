@@ -1,4 +1,5 @@
 #include "BuildTest.hpp"
+using namespace std::chrono;
 
 int demo(int argc, char const *argv[]) {
   cout << "== DEMO MODE ==" << endl;
@@ -10,23 +11,26 @@ int demo(int argc, char const *argv[]) {
     settings.push_back(argv[i]);
   }
   CubeSatCamera camera;
+  camera.release();
 
-  long startTime = CURRENT_TIME;
+  high_resolution_clock::time_point t1 = high_resolution_clock::now();
   camera.init();
-  initTime = CURRENT_TIME - startTime;
+  high_resolution_clock::time_point t2 = high_resolution_clock::now();
+  auto init = duration_cast<milliseconds>(t2 - t1).count();
 
   cameraParams_t params;
   camera.parseParams(settings, &params);
   
   cout << "enter any key to take a picture " << endl;
   getchar();
-  startTime = CURRENT_TIME;
+  t1 = high_resolution_clock::now();
   camera.grab(&params);
-  cameraTime = CURRENT_TIME - startTime;
+  t2 = high_resolution_clock::now();
+  auto time = duration_cast<milliseconds>(t2 - t1).count();
 
   spdlog::info("Runtimes: ");
-  spdlog::info("Initialize Runtime: " + to_string(initTime) + "ms");
-  spdlog::info("Camera Runtime: " + to_string(cameraTime) + "ms");
+  spdlog::info("Initialize Runtime: {}ms", init);
+  spdlog::info("Camera Runtime: {}ms", time);
 
   string pictureSize = "du -h Pictures/*";
   spdlog::info("File sizes: ");
