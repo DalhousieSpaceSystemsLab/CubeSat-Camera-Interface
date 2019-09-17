@@ -20,7 +20,7 @@ Message getMessage();
 int main(int argc, char const *argv[]);
 string getDate();
 std::shared_ptr<spdlog::logger> logger;
-CubeSatCamera camera;
+CubeSatCamera camera = NULL;
 long processingTime;
 
 

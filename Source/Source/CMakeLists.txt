@@ -3,8 +3,8 @@ set ( CMAKE_CXX_STANDARD 11 )
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_HOME_DIRECTORY}/../Build-Debug)
 set (CMAKE_BINARY_DIR ${CMAKE_HOME_DIRECTORY}/../Build-Debug)
 project( CubeSatCamera.cpp )
-find_package( spdlog REQUIRED )
 find_package( OpenCV REQUIRED )
+find_package( spdlog REQUIRED )
 
 SET ( OS include/internal-messaging)
 
@@ -30,6 +30,7 @@ SET ( message
 )
 
 include_directories ( 
+
    include 
    ${OS}/message/header 
    ${OS}/message/identifiers 

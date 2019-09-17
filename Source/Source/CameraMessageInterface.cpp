@@ -217,9 +217,11 @@ bool changeSettings(Message * message, cameraParams_t * params) {
 
 int main(int argc, char const *argv[]) { 
     if (argc > 1 && strcmp(argv[1],"-t") == 0) {
+        camera = CubeSatCamera(0);
         demo(argc, argv);
         return 0;
     }
+    camera = CubeSatCamera();
     spdlog::info("== NORMAL MODE ==");
     cameraParams_t params_struct;
     cameraParams_t * params = &params_struct;

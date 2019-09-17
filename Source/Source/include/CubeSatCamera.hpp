@@ -24,7 +24,6 @@ public:
     bool release();
     bool isReady();
     void flush();
-    void parseParams(vector<std::string> argv, cameraParams_t * param);
     string getFileName();
     CubeSatCamera() {
         C0.release();
@@ -36,6 +35,9 @@ public:
         };
         spdlog::flush_every(chrono::seconds(5));
     }
+    CubeSatCamera(int debug) : CubeSatCamera() {
+       spdlog::set_level(spdlog::level::debug);
+    }
     ~CubeSatCamera() {
         release();
         spdlog::drop("CubeSatCamera");
@@ -45,8 +47,6 @@ private:
     std::shared_ptr<spdlog::logger> logger;
     VideoCapture C0 = NULL;
     VideoCapture C1 = NULL;
-    string getDate();
-    string getTime();
     Mat capture( VideoCapture *cap );
     bool grab(int camera, cameraParams_t * param);
     bool compress ( const Mat &frame, const cameraParams_t * param, string camera);
