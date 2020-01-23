@@ -28,29 +28,26 @@ int UnixDomainStreamSocketClient::ConnectToSocket(char sun_path[]) {
     return 0;
 }
 
-int UnixDomainStreamSocketClient::Send(char message[]) {
-    if (WriteToSocket(message, socket_file_descriptor_) != 0) {
+int UnixDomainStreamSocketClient::Send(char message[], unsigned int message_capacity) {
+    if (WriteToSocket(message, socket_file_descriptor_, message_capacity) != 0) {
         error("ERROR SENDING MESSAGE");
         return 1;
     }
     return 0;
 }
 
-int UnixDomainStreamSocketClient::SendMessageAwaitReply(char message[]) {
-    if (WriteToSocket(message, socket_file_descriptor_) != 0) {
+int UnixDomainStreamSocketClient::SendMessageAwaitReply(char message[], string & reply, unsigned int message_capacity, unsigned int reply_capacity) {
+    if (WriteToSocket(message, socket_file_descriptor_, message_capacity) != 0) {
         error("ERROR SENDING MESSAGE");
         return 1;
     }
-    int capacity=255;
-    if (ReadFromSocket(socket_file_descriptor_,capacity) != 0) {
+    char buf[reply_capacity];
+	cout << "Reading from Socket " << socket_file_descriptor_ << " for a reply" << endl;
+    if (ReadFromSocket(buf, socket_file_descriptor_, reply_capacity) != 0) {
+
         error("ERROR READING FROM SOCKET");
         return 1;
     }
-    return 0;
-}
-
-//default implementation
-int UnixDomainStreamSocketClient::HandleMessage(char *buffer){
-    cout << "Handling message " << buffer << endl;
+    reply=buf;
     return 0;
 }

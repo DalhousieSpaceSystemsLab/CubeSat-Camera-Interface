@@ -32,32 +32,36 @@ int UnixDomainStreamSocket::InitializeSocket(char sun_path[]) {
 }
 
 //Write msg to the socket specified by the sfd
-int UnixDomainStreamSocket::WriteToSocket(const char *msg, int new_socket_file_descriptor) {
+int UnixDomainStreamSocket::WriteToSocket(const char *msg, int new_socket_file_descriptor, unsigned int buffer_capacity) {
 
-    strcpy(this->buffer_, msg);
-    n_ = write(new_socket_file_descriptor, this->buffer_, strlen(this->buffer_));
+    n_ = write(new_socket_file_descriptor, msg, buffer_capacity);
 
     if (n_ < 0) {
         error("ERROR writing to socket");
         return 1;
     }
-    ResetBuffer();
 
     return 0;
 }
 
-//TODO pass a buffer as an argument into this function rather than using some class/"global" one
 //Read from the socket specified by the sfd
-int UnixDomainStreamSocket::ReadFromSocket(int new_socket_file_descriptor, int buffer_capacity) {
-    ResetBuffer();
 
-    n_ = read(new_socket_file_descriptor, buffer_, buffer_capacity);
+int UnixDomainStreamSocket::ReadFromSocket(char* buffer, int new_socket_file_descriptor, int buffer_capacity, unsigned int timeout) {
+
+    //Set timeout on socket
+    struct timeval tv;
+    tv.tv_sec = timeout;
+    tv.tv_usec = 0;
+    setsockopt(new_socket_file_descriptor, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof tv); 
+
+    n_ = read(new_socket_file_descriptor, buffer, buffer_capacity);
 
     if (n_ < 0) {
         error("ERROR reading from socket");
-        return 0;
+        return 1;
     }
-    return HandleMessage(buffer_);
+
+    return 0;
 }
 
 //Prints error messages
@@ -65,12 +69,8 @@ void UnixDomainStreamSocket::error(const char *msg) {
     perror(msg);
 }
 
-//Sets buffer_ to an array of 0's
-void UnixDomainStreamSocket::ResetBuffer() {
-    bzero(buffer_, 256);
-}
-
 //Clears all fields in the socket_address_ struct
 void UnixDomainStreamSocket::ClearAddress() {
     bzero((char *) &socket_address_, sizeof(socket_address_));
 }
+

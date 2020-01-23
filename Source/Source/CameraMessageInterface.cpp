@@ -1,5 +1,7 @@
 #include "CameraMessageInterface.hpp"
 using namespace std;
+Identifiers identifiers;
+MessageReceivingService interface(identifiers.payload_repository);
 
 //gets today's date in YYYY-MM-DD format
 string getDate() {
@@ -12,19 +14,15 @@ string getDate() {
 }
 
 bool sendStatus(int data) {
-    MessageBuilder builder;
-    builder.StartMessage();
     KeyValuePairContainer container;
-    Identifiers identifiers;
+    CommandMessage message;
 
-    container.AddKeyValuePair(0, data);
+    message.SetSender(identifiers.payload_subsystem);
+    message.SetRecipient(identifiers.payload_repository);
+    message.SetTimeCreated(CURRENT_TIME);
+    message.Add(0, data);
 
-    builder.SetSender(identifiers.payload_subsystem);
-    builder.SetRecipient(identifiers.payload_repository);
-    builder.SetMessageContents(container);
-
-    Message message = builder.CompleteMessage();
-
+    interface.Reply(message);
     //MessageSenderInterface ms(message.GetRecipient());
     //ms.SendMessage(message);
 
@@ -53,7 +51,7 @@ bool sendPictureConfirmation(string filename) {
     builder.SetSender(identifers.payload_subsystem);
     builder.SetRecipient(identifers.payload_repository);
     builder.SetMessageContents(container);
-    Message message = builder.CompleteMessage();
+    DataMessage message = builder.CompleteMessage();
 
     cout << endl << "== BEGIN CONTENTS ==" << endl;
 	cout << endl << "RECIPIENT: " << message.GetRecipient() << endl
@@ -63,6 +61,7 @@ bool sendPictureConfirmation(string filename) {
         << INDENT_SPACES << "FILENAME: " << filename << endl;
     cout << endl << "== END CONTENTS ==" << endl << endl; 
 
+    interface.Reply(message);
     //MessageSenderInterface ms(message.GetRecipient());
     //ms.SendMessage(message);
     return true;
@@ -70,33 +69,32 @@ bool sendPictureConfirmation(string filename) {
 
 int i = 0;
 bool imgSwitch = false;
-Message getMessage() {
-    MessageBuilder builder;
-    builder.StartMessage();
-    KeyValuePairContainer container;
+//TODO - Make this actually get message, lol
+CommandMessage getMessage() {
+    CommandMessage message;
     Identifiers identifiers;
     if (i == 0) {
         spdlog::info("TEST: Sending INIT Message");
-        container.AddKeyValuePair(0, incoming_data.initialize);
+        message.Add(0, incoming_data.initialize);
     } else if (i == 2) {
         spdlog::info("TEST: Sending TAKE PICTURE Message");
-        container.AddKeyValuePair(0, incoming_data.take_picture);
+        message.Add(0, incoming_data.take_picture);
     } else if (i == 4) {
         spdlog::info("TEST: Sending CHANGE SETTINGS Message");
-        container.AddKeyValuePair(0, incoming_data.change_settings);
+        message.Add(0, incoming_data.change_settings);
         if (imgSwitch) {
             spdlog::info("Switched -> png");
-            container.AddKeyValuePair(1, image_format.png);
+            message.Add(1, image_format.png);
             imgSwitch = false;
         }
         else {
             spdlog::info("Switched -> jpeg");
-            container.AddKeyValuePair(1, image_format.jpeg);
+            message.Add(1, image_format.jpeg);
             imgSwitch = true;
         }
     } else if (i == 6) {
         spdlog::info("TEST: Sending SHUTDOWN Message");
-        container.AddKeyValuePair(0, incoming_data.shut_down);
+        message.Add(0, incoming_data.shut_down);
     } else if (i == 8) {
         spdlog::info("TEST: Resetting loop");
         i = -1; //will be set to 0 at the end of the loop
@@ -105,10 +103,18 @@ Message getMessage() {
     }
     i++;
 
-    builder.SetMessageContents(container);
-    builder.SetRecipient(identifiers.payload_subsystem);
-    builder.SetSender(identifiers.payload_repository);
-    Message message = builder.CompleteMessage();
+    message.SetRecipient(identifiers.payload_subsystem);
+    message.SetSender(identifiers.payload_repository);
+    return message;
+}
+
+Message * getRealMessage() {
+    Identifiers identifiers;
+    Message * message;
+    int response = interface.ListenForMessage(message, 255U);
+    if (!response)
+        spdlog::critical("Message failed to read");
+        throw "Message failed";
     return message;
 }
 
@@ -217,7 +223,6 @@ bool changeSettings(Message * message, cameraParams_t * params) {
 
 int main(int argc, char const *argv[]) { 
     if (argc > 1 && strcmp(argv[1],"-t") == 0) {
-        camera = CubeSatCamera(0);
         demo(argc, argv);
         return 0;
     }
@@ -235,7 +240,7 @@ int main(int argc, char const *argv[]) {
     while (true) {
         messageSuccess = false;
         spdlog::info("Checking for messages...");
-        Message message = getMessage();
+        CommandMessage message = getMessage();
         if (message.GetMessageContents().GetAmountofIntPairs() != 0) {
             processingTime = CURRENT_TIME;
             spdlog::info("MESSAGE RECEIVED");

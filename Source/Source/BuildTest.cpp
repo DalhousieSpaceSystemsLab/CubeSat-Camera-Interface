@@ -4,14 +4,11 @@ using namespace std::chrono;
 int demo(int argc, char const *argv[]) {
   cout << "== DEMO MODE ==" << endl;
   
-  long initTime;
-  long cameraTime;
   vector<std::string> settings;
   for (int i = 0; i < argc; i++) {
     settings.push_back(argv[i]);
   }
-  CubeSatCamera camera;
-
+  CubeSatCamera camera(0);
   high_resolution_clock::time_point t1 = high_resolution_clock::now();
   camera.init();
   high_resolution_clock::time_point t2 = high_resolution_clock::now();

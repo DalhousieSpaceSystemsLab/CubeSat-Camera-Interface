@@ -25,7 +25,7 @@ bool CubeSatCamera::compress(const Mat &frame, const cameraParams_t *params, str
     compression_params.push_back(IMWRITE_PNG_COMPRESSION);
     compression_params.push_back(params -> quality);
   }
-  bool result = imwrite(params -> filePath + params -> fileName + "(" + camera + ")" + "." + params -> compression, frame, compression_params);
+  bool result = imwrite(params -> filePath + params -> fileName + "(" + camera + ")" + "." + params -> compression, frame);
   spdlog::debug("[compress()] ENDED - {}", CURRENT_TIME);
   spdlog::debug("[compress()] Duration: {}", CURRENT_TIME - start_time);
   return result;
@@ -39,7 +39,6 @@ bool CubeSatCamera::grab(cameraParams_t * param) {
   if (C0.isOpened()) 
     result = result || grab(0, param);
   if (C1.isOpened()) {
-    cout << "WHY" << endl;
     result = result || grab(1, param);;
   }
   spdlog::debug("[grab() both Cameras] ENDED - {}", CURRENT_TIME);
@@ -82,6 +81,7 @@ bool CubeSatCamera::grab(int camera, cameraParams_t * param) {
   }
   else //camera not properly initialized
     logger -> warn("Unable to take picture");
+  
   logger -> info("Runtime: " + to_string(CURRENT_TIME - start_time));
   spdlog::debug("[grab()] ENDED - {}", CURRENT_TIME);
   spdlog::debug("[grab()] Duration: {}", CURRENT_TIME - start_time);
@@ -110,8 +110,6 @@ bool CubeSatCamera::init() {
   spdlog::debug("[init()] STARTED - {}", CURRENT_TIME);
   logger -> info("INITIALIZING CAMERAS");
 
-  int results = 0;
-
   //initializing cameras here
   logger -> info("Initializing camera 0...");
   C0.open(0);
@@ -122,7 +120,6 @@ bool CubeSatCamera::init() {
     logger -> critical("Camera 0 failed to initialize");
   }
   spdlog::debug("[C0] Initialization Duration: {}", CURRENT_TIME - start_time);
-
   logger -> info("Initializing camera 1...");
   C1.open(1);
   if (C1.isOpened()) {
@@ -132,7 +129,6 @@ bool CubeSatCamera::init() {
     logger -> critical("Camera 1 failed to initialize");
   }
   spdlog::debug("[C1] Initialization Duration: {}", CURRENT_TIME - start_time);
-
   spdlog::debug("[init()] ENDED - {}", CURRENT_TIME);
   spdlog::debug("[init()] Duration: {}", CURRENT_TIME - start_time);
   return C0.isOpened() || C1.isOpened();

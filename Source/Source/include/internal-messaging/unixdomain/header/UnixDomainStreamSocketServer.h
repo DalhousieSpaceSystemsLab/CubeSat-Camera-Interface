@@ -26,9 +26,7 @@ class UnixDomainStreamSocketServer : protected UnixDomainStreamSocket {
 
 private:
 
-    int new_socket_file_descriptor_;
-    int socket_io_status_;
-    int servlen, n;
+    int current_client_socket_file_descriptor_;
     socklen_t client_address_size;
     struct sockaddr_un client_address_;
 
@@ -45,13 +43,26 @@ public:
     //sock_path - local file system path to unix domain socket as string
     UnixDomainStreamSocketServer(string sock_path);
 
+    int GetCurrentClientFileDescriptor();
+
+    //Starts listening on the socket file descriptor
+    int StartListening();
 
     //TODO Add a virtual function that allows the server to perform some operation in between waiting
-    //TODO Find a way to continue looping IF there are no waiting clients. RIght now it just pauses.
     //TODO Checkout "fcntl". May potentially allow non-blocking mode
     //Method to poll socket for new connections from UnixDomainStreamSocketClients
     //Calls ReadFromSocket once a connection is found
-    virtual void WaitForConnection();
+    //Gets information that is waiting on the unix socket
+    //Contents will be set as message string for processing
+    //Will get and fill the message string from the socket
+    //Will not get more bytes from socket then the specified capacity
+    virtual int HandleConnection(string &message, unsigned int capacity);
+
+    //Sends message to the last file descriptor connected via HandleConnection
+    //message - message to be sent to current client
+    //reply_capacity - maximum number of bytes that will be sent through the socket
+    int ReplyToCurrentClient(char* message, unsigned int reply_capacity);
+
 };
 
 #endif // LORIS_UNIXDOMAIN_UNIXDOMAIN_SERVER_H_

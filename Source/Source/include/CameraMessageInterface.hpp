@@ -5,8 +5,11 @@
 #include "BuildTest.hpp"
 #include "CameraDataTypes.hpp"
 #include "Message.h"
+#include "DataMessage.h"
+#include "PhoneBook.h"
+#include "CommandMessage.h"
 #include "MessageBuilder.h"
-#include "MessageSenderInterface.h"
+#include "MessageReceivingService.h"
 #include <string>
 #include <iostream>
 #include <math.h>
@@ -16,7 +19,7 @@
 
 bool sendStatus(int data);
 bool sendPictureConfirmation(string data);
-Message getMessage();
+CommandMessage getMessage();
 int main(int argc, char const *argv[]);
 string getDate();
 std::shared_ptr<spdlog::logger> logger;

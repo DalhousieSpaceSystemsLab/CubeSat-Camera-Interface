@@ -26,6 +26,7 @@ public:
     void flush();
     string getFileName();
     CubeSatCamera() {
+        spdlog::set_level(spdlog::level::info);
         C0.release();
         C1.release();
         try {
