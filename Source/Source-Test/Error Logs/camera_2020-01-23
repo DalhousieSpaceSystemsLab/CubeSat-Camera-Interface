@@ -1,0 +1,77 @@
+[2020-01-23 18:17:03.593] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:03.593] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:04.239] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:04.239] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:06.079] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:06.079] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:06.713] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:06.713] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:07.312] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:07.312] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:07.312] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:08.603] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:08.603] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:09.255] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:09.255] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:09.289] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:09.314] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/test (C0).jpeg
+[2020-01-23 18:17:09.314] [CubeSatCamera] [info] Runtime: 59
+[2020-01-23 18:17:09.315] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:09.816] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:11.045] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:11.045] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:11.701] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:11.701] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:11.715] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:11.734] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).png
+[2020-01-23 18:17:11.734] [CubeSatCamera] [info] Runtime: 33
+[2020-01-23 18:17:11.734] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:12.241] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:13.525] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:13.525] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:14.175] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:14.175] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:14.198] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:14.217] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).jpeg
+[2020-01-23 18:17:14.217] [CubeSatCamera] [info] Runtime: 42
+[2020-01-23 18:17:14.217] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:14.744] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:16.008] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:16.008] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:16.633] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:16.633] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:17.221] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:18.442] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:18.442] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:19.093] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:19.093] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:19.126] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:19.143] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).jpeg
+[2020-01-23 18:17:19.143] [CubeSatCamera] [info] Runtime: 50
+[2020-01-23 18:17:19.144] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:19.201] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:19.307] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).jpeg
+[2020-01-23 18:17:19.307] [CubeSatCamera] [info] Runtime: 163
+[2020-01-23 18:17:19.311] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:19.365] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:19.468] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).jpeg
+[2020-01-23 18:17:19.468] [CubeSatCamera] [info] Runtime: 157
+[2020-01-23 18:17:19.469] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:19.538] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:19.578] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).jpeg
+[2020-01-23 18:17:19.578] [CubeSatCamera] [info] Runtime: 109
+[2020-01-23 18:17:19.578] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:19.615] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:19.682] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).jpeg
+[2020-01-23 18:17:19.682] [CubeSatCamera] [info] Runtime: 104
+[2020-01-23 18:17:19.683] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:20.130] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:21.331] [CubeSatCamera] [info] INITIALIZING CAMERAS
+[2020-01-23 18:17:21.331] [CubeSatCamera] [info] Initializing camera 0...
+[2020-01-23 18:17:22.017] [CubeSatCamera] [info] Initialized
+[2020-01-23 18:17:22.017] [CubeSatCamera] [info] Using Camera 0...
+[2020-01-23 18:17:22.025] [CubeSatCamera] [info] Frame grabbed successfully
+[2020-01-23 18:17:22.056] [CubeSatCamera] [info] Compressed successfully! Saved at Pictures/2020-1-23 (C0).jpeg
+[2020-01-23 18:17:22.056] [CubeSatCamera] [info] Runtime: 39
+[2020-01-23 18:17:22.056] [CubeSatCamera] [info] RELEASING CAMERAS
+[2020-01-23 18:17:22.584] [CubeSatCamera] [info] RELEASING CAMERAS
