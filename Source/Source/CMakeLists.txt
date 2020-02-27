@@ -18,7 +18,7 @@ SET ( unixdomain
 SET ( message 
    ${OS}/messaging-service/cc/MessageRecievingService.cc
    ${OS}/messaging-service/cc/PhoneBook.cc 
-   
+   ${OS}/messaging-service/cc/MessageRecipientInterface.cc
    ${OS}/message/cc/MessageBuilder.cc
    ${OS}/message/cc/Message.cc 
    ${OS}/message/cc/DataMessage.cc
@@ -27,6 +27,7 @@ SET ( message
    ${OS}/message/cc/Key.cc 
    ${OS}/message/cc/KeyIntPair.cc 
    ${OS}/message/cc/KeyFloatPair.cc
+   ${OS}/message/cc/KeyStringPair.cc
    ${OS}/message/cc/KeyValuePairContainerInterface.cc 
    ${OS}/message/cc/Message.cc 
    ${OS}/message/cc/MessageBuilder.cc 
